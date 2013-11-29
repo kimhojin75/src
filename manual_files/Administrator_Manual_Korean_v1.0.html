@@ -1,0 +1,1010 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Administrator_Manual_2013.11.28,1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{margin:0;padding:0;}
+body {
+         font:13.34px helvetica,arial,freesans,clean,sans-serif;
+         color:black;
+         line-height:1.4em;
+         background-color: #F8F8F8;
+         padding: 0.7em;
+}
+p {
+         margin:1em 0;
+         line-height:1.5em;
+}
+table {
+         font-size:inherit;
+         font:100%;
+         margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono",monospace;}
+pre {
+         margin:1em 0;
+         font-size:12px;
+         background-color:#eee;
+         border:1px solid #ddd;
+         padding:5px;
+         line-height:1.5em;
+         color:#444;
+         overflow:auto;
+         -webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+         padding:0;
+         font-size:12px;
+         background-color:#eee;
+         border:none;
+}
+code {
+         font-size:12px;
+         background-color:#f8f8ff;
+         color:#444;
+         padding:0 .2em;
+         border:1px solid #dedede;
+}
+img{border:1px solid gray;;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:4em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:2em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+h4{font-size:130%;padding-top:1.5em;text-align:center;}
+h5{font-size:150%;padding-top:.5em;padding-left:20px;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+   font-size: 0.83em;
+   vertical-align: super;
+   line-height: 0;
+}
+* {
+         -webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+   body {
+      width: 854px;
+      margin:0 auto;
+   }
+}
+@media print {
+         table, pre {
+                  page-break-inside: avoid;
+         }
+         pre {
+                  word-wrap: break-word;
+         }
+}
+
+#toc {
+	list-style: none;
+	margin-bottom: 20px;
+}
+#toc li {
+	background: url(dot.gif) repeat-x bottom left;
+	overflow: hidden;
+	padding-bottom: 2px;
+	font-size:100%;
+}
+#toc a,
+#toc span {
+	display: inline-block;
+	background: #fff;
+	position: relative;
+	bottom: -4px;
+	color:black;
+}
+#toc a {
+	float: left;
+}
+#toc span {
+	float: left;
+	padding: 0 2px 3px 0;
+}
+
+
+
+
+/* Main style for the table */
+
+.dp-highlighter
+{
+	font-family: "Courier New" , Courier, mono;
+	font-size: 12px;
+	border: 1px solid #4e4747;
+	background-color: #fff;
+	width: 99%;
+	overflow: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.dp-highlighter .bar
+{
+	padding-left: 45px;
+}
+
+.dp-highlighter.collapsed .bar, .dp-highlighter.nogutter .bar
+{
+	padding-left: 0px;
+}
+
+.dp-highlighter ol
+{
+	margin: 0px 0px 1px 5px; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+	padding: 0px;
+	color: #4e4747;
+}
+
+.dp-highlighter.nogutter ol
+{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.dp-highlighter ol li, .dp-highlighter .columns div
+{
+	border-left: 0px;
+	background-color: #fff;
+	padding-left: 10px;
+	line-height: 14px;
+}
+
+.dp-highlighter.nogutter ol li, .dp-highlighter.nogutter .columns div
+{
+	border: 0;
+}
+
+.dp-highlighter .columns
+{
+	color: gray;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dp-highlighter .columns div
+{
+	padding-bottom: 5px;
+}
+
+.dp-highlighter ol li.alt
+{
+	background-color: #f8f8f8;
+}
+
+.dp-highlighter ol li span
+{
+	color: Black;
+}
+
+/* Adjust some properties when collapsed */
+
+.dp-highlighter.collapsed ol
+{
+	margin: 0px;
+}
+
+.dp-highlighter.collapsed ol li
+{
+	display: none;
+}
+
+/* Additional modifications when in print-view */
+
+.dp-highlighter.printing
+{
+	border: none;
+}
+
+.dp-highlighter.printing .tools
+{
+	display: none !important;
+}
+
+.dp-highlighter.printing li
+{
+	display: list-item !important;
+}
+
+/* Styles for the tools */
+
+.dp-highlighter .tools
+{
+	padding: 3px 8px 3px 10px;
+	border-bottom: 1px solid #2B91AF;
+	font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: silver;
+}
+
+.dp-highlighter.collapsed .tools
+{
+	border-bottom: 0;
+}
+
+.dp-highlighter .tools a
+{
+	font-size: 9px;
+	color: gray;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.dp-highlighter .tools a:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* About dialog styles */
+
+.dp-about { background-color: #fff; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; width: 60px; height: 22px; }
+
+/* Language specific styles */
+
+.dp-xml {}
+.dp-xml .cdata { color: #ff1493; }
+.dp-xml .comments { color: green; }
+.dp-xml .tag { font-weight: bold; color: blue; }
+.dp-xml .tag-name { color: black; font-weight: bold; }
+.dp-xml .attribute { color: red; }
+.dp-xml .attribute-value { color: blue; }
+
+</style>
+</head>
+<body>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/Administrator_Manual.jpg" />
+<br></p>
+<h4>- 목 차 -</h4>
+<ul id="toc">
+<li><span><a href="#P-CUBE에 대한 전반적인 이해">P-CUBE에 대한 전반적인 이해</a></span></li>
+<li><span><a href="#Chapter 1 : P-CUBE 관리자 기능">Chapter 1 : P-CUBE 관리자 기능</a></span></li>
+<li><span><a href="#관리자 계정과 권한">&nbsp;&nbsp; - 관리자 계정과 권한</a></span></li>
+<li><span><a href="#Chapter 2 : 스키마 관리">Chapter 2 : 스키마 관리</a></span></li>
+<li><span><a href="#스키마 생성">&nbsp;&nbsp; - 스키마 생성</a></span></li>
+<li><span><a href="#스키마 관리">&nbsp;&nbsp; - 스키마 관리</a></span></li>
+<li><span><a href="#Chapter 3 : 조직 & 컬렉션 관리">Chapter 3 : 조직 & 컬렉션 관리</a></span></li>
+<li><span><a href="#조직 생성">&nbsp;&nbsp; - 조직 생성</a></span></li>
+<li><span><a href="#조직 관리">&nbsp;&nbsp; - 조직 관리</a></span></li>
+<li><span><a href="#컬렉션 생성">&nbsp;&nbsp; - 컬렉션 생성</a></span></li>
+<li><span><a href="#컬렉션 관리">&nbsp;&nbsp; - 컬렉션 관리</a></span></li>
+<li><span><a href="#Chapter 4 : 아이템 관리">Chapter 4 : 아이템 관리</a></span></li>
+<li><span><a href="#아이템 관리">&nbsp;&nbsp; - 아이템 관리</a></span></li>
+<li><span><a href="#철회 아이템 관리">&nbsp;&nbsp; - 철회 아이템 관리</a></span></li>
+<li><span><a href="#Chapter 5 : 아이템 반입">Chapter 5 : 아이템 반입</a></span></li>
+<li><span><a href="#아이템 반입">&nbsp;&nbsp; - 아이템 반입</a></span></li>
+<li><span><a href="#Chapter 6 : 이용자 관리">Chapter 6 : 이용자 관리</a></span></li>
+<li><span><a href="#이용자 관리">&nbsp;&nbsp; - 이용자 관리</a></span></li>
+<li><span><a href="#Chapter 7 : 그룹 관리">Chapter 7 : 그룹 관리</a></span></li>
+<li><span><a href="#그룹 관리">&nbsp;&nbsp; - 그룹 관리</a></span></li>
+<li><span><a href="#Chapter 8 : 통계 관리">Chapter 8 : 통계 관리</a></span></li>
+<li><span><a href="#통계 관리">&nbsp;&nbsp; - 통계 관리</a></span></li>
+<li><span><a href="#Chapter 9 : 코드 관리">Chapter 9 : 코드 관리</a></span></li>
+<li><span><a href="#코드 관리">&nbsp;&nbsp; - 코드 관리</a></span></li>
+<li><span><a href="#Chapter 10 : 공지사항 관리">Chapter 10 : 공지사항 관리</a></span></li>
+<li><span><a href="#공지사항 관리">&nbsp;&nbsp; - 공지사항 관리</a></span></li>
+<li><span><a href="#Chapter 11 : 환경 설정">Chapter 11 : 환경 설정</a></span></li>
+<li><span><a href="#환경 설정">&nbsp;&nbsp; - 환경 설정</a></span></li>
+<li><span><a href="#Chapter 12 : 시스템 모니터링">Chapter 12 : 시스템 모니터링</a></span></li>
+<li><span><a href="#시스템 모니터링">&nbsp;&nbsp; - 시스템 모니터링</a></span></li>
+</ul>
+<p><br><br></p>
+<p><a name="P-CUBE에 대한 전반적인 이해"></a></p>
+<h2>P-CUBE에 대한 전반적인 이해</h2>
+<ol>
+<li>
+<p>아이템 제출 및 검증 프로세스 이해<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt1.jpg" />  
+</p>
+<blockquote>
+<p>데이터 제출자는 아이템을 제출합니다.<br />
+데이터 검증자로 지정 된 이용자는 타 이용자의 데이터를 검증합니다.<br />
+관리자는 제출되는 아이템이 관리되는 컬렉션을 생성합니다.<br />
+관리자는 이용자가 제출하는 아이템의 메타데이터를 생성합니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>스키마와 컬렉션의 관계 이해<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt2.jpg" />  
+</p>
+<blockquote>
+<p>하나 이상의 컬렉션에 연결된 원본 스키마 ‘S’는 수정할 수 없습니다.<br />
+하나 이상의 아이템이 제출된 컬렉션의 스키마(MS1)은  수정할 수 없습니다.<br />
+아이템이 제출되지 않은 컬렉션의 스키마(MS2)는 수정할 수 있습니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>P-CUBE data model<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt3.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 제출 및 검증 권한 이해<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt4.jpg" />  
+</p>
+<blockquote>
+<p>관리자는 컬렉션을 생성할 때 해당 컬렉션의 접근, 아이템의 제출 및 검증 방법을 지정할 수 있습니다.<br />
+모든 사람이 컬렉션에 접근하게 할 수도 있으며, 특정 이용자만 컬렉션을 검색할 수 있도록 할 수 있습니다.<br />
+모든 사람이 컬렉션에 아이템을 제출 하거나, 특정 이용자만 컬렉션에 아이템을 제출하도록 할 수 있습니다.<br />
+컬렉션에 제출되는 아이템의 검증 절차가 필요할 경우, 검증절차를 포함 시킬 수 있으며, 이는 논문의 peer-review 과정과 유사합니다.<br />
+검증 절차가 불필요할 경우, 컬렉션에 제출되는 아이템은 제출이 완료되는 시점에 검색서비스에 노출 됩니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 1 : P-CUBE 관리자 기능"></a></p>
+<h1>Chapter 1 : P-CUBE 관리자 기능</h1>
+<p><a name="관리자 계정과 권한"></a></p>
+<h2>관리자 계정과 권한</h2>
+<p><strong>관리자 시스템에 접속하기 위해서는 관리자 권한이 필요합니다.</strong>  </p>
+<ol>
+<li>
+<p>아래 이미지는 이용자 사이트에서의 관리자 권한 유무에 따라 다르게 출력되는 로그인 정보입니다. 왼쪽이 관리자이고 오른쪽이 이용자입니다. 관리자에게만 보이는 &quot;Go Admin Site&quot;링크를 클릭하면 관리자 메인화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/login1.jpg" />  
+</p>
+</li>
+<li>
+<p>아래 이미지는 관리자 권한을 가진 계정으로 로그인했을 경우, 관리자 화면에 표시되는 로그인 정보입니다. &quot;Go User Site&quot;링크를 클릭하면 이용자 사이트로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/login2.jpg" />  
+</p>
+<blockquote>
+<p>P-CUBE는 별도의 URL 체계로 이용자 시스템과 관리자 시스템을 제공합니다.<br />
+관리자 권한이 있는 이용자에게만 관리자 사이트로 이동할 수 있는 링크가 표시됩니다.<br />
+그룹 관리 기능을 통해 다른 이용자에게 관리자 권한을 부여할 수 있습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 2 : 스키마 관리"></a></p>
+<h1>Chapter 2 : 스키마 관리</h1>
+<p><strong>데이터 제출자는 제출 권한이 할당된 ‘컬렉션’에 아이템을 제출하며, 스키마에 지정된 메타데이터 항목을 이용하여, 제출하는 아이템의 정보를 입력합니다.</strong><br />
+<strong>이하에서는 아이템을 제출할 때 입력해야 하는 항목을 지정하는 스키마 관리에 대한 내용입니다.</strong>  </p>
+<p><a name="스키마 생성"></a></p>
+<h2>스키마 생성</h2>
+<p><strong>메타데이터의 구조 및 표시설정의 집합인 스키마를 생성하는 기능을 제공합니다. 모든 컬렉션은 하나의 스키마를 갖습니다.</strong>  </p>
+<ol>
+<li>
+<p>좌측 메뉴에서 &quot;스키마 관리&quot;를 클릭하면 스키마 관리화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema1.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;스키마 신규 생성&quot;버튼을 클릭하면 &quot;기본정보&quot; 입력화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema2.jpg" />  
+</p>
+<blockquote>
+<p>스키마 명칭 : 스키마의 제목입니다.<br />
+네임스페이스 : 스키마의 네임스페이스로 xml, xsd파일 등의 생성구조에 사용됩니다.<br />
+스키마 설명 : 스키마에 대한 설명입니다.<br />
+원본 스키마 : 스키마의 엘리먼트 생성 시 참조할 스키마를 선택합니다. 선택한 스키마의 엘리먼트는 &quot;입력구조 설정&quot; 단계에서 적용됩니다.<br />
+참조네임스페이스 : 스키마의 참조네임스페이스로 xml, xsd파일 등의 생성구조에 사용됩니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>입력구조 설정화면에서는 스키마의 엘리먼트 구조를 설정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema3.jpg" />  
+</p>
+<blockquote>
+<p>XSD 반입 : XSD파일을 이용해서 엘리먼트 정보를 반입합니다.<br />
+DTD 반입 : DTD파일을 이용해서 엘리먼트 정보를 반입합니다.<br />
+요소추가 : 엘리먼트를 추가합니다.<br />
+자식추가 : 선택된 엘리먼트의 하위 엘리먼트를 추가합니다.<br />
+선택삭제 : 선택된 엘리먼트를 삭제합니다.<br />
+위로이동 : 엘리먼트의 위치를 위로 이동합니다. 같은 레벨의 엘리먼트끼리 위치가 변경됩니다.<br />
+아래로이동 : 엘리먼트의 위치를 아래로 이동합니다. 같은 레벨의 엘리먼트끼리 위치가 변경됩니다.<br />
+펼쳐보기 : 닫혀져 있는 엘리먼트를 포함한 모든 엘리먼트정보가 펼쳐져서 보여집니다.<br />
+저장 : 현재 상태의 엘리먼트 정보를 저장합니다.  
+</p>
+<p>입력 : 아이템 제출 단계 중 메타데이터 입력 시 엘리먼트 표시 유무 설정입니다.<br />
+필수 : 아이템 제출 단계 중 메타데이터 입력 시 필수 입력 항목 설정입니다.<br />
+반복 : 아이템 제출 단계 중 메타데이터 입력 시 엘리먼트를 추가해서 입력할 수 있는 설정입니다.<br />
+속성형 : XML의 어트리뷰트에 해당하는 항목임을 표시합니다.<br />
+색인필드 : 'Element'항목을 '색인필드'에 지정된 의미로 색인합니다.<br />
+페이지 나눔 : 표시한 엘리먼트를 기준으로 메타데이터 입력 페이지가 나누어 집니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>입력표시 설정화면에서는 아이템 제출 단계 중 메타데이터 입력 시 표시되는 엘리먼트의 명칭, 입력형식을 설정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema4.jpg" />  
+</p>
+<blockquote>
+<p>항목 표시명 : 엘리먼트 명칭으로 표시됩니다.<br />
+입력형식 : 엘리먼트 값의 입력란 형식을 설정합니다.<br />
+선택항목 : 입력형식이 &quot;dropdown&quot; 일때 표시되는 목록 정보입니다.<br />
+도움말 : 각각의 엘리먼트에 대한 설명을 나타냅니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>미리보기 화면에서는 스키마 생성단계에서 입력한 정보를 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema5.jpg" />  
+</p>
+<blockquote>
+<p>&quot;완료&quot;버튼을 클릭하면 스키마 생성이 완료되며 스키마 목록에서 생성된 스키마를 확인할 수 있습니다.<br />
+완료되지 않은 스키마는 스키마 관리화면에서 '작업중'으로 표시되며, 다음에 다시 생성작업을 이어서할 수 있습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="스키마 관리"></a></p>
+<h2>스키마 관리</h2>
+<p><strong>스키마 신규생성을 통해 생성된 스키마의 기본정보, 입력구조, 입력표시를 관리하는 기능을 제공합니다.</strong><br />
+<strong>스키마와 매핑된 컬렉션이 존재하면 입력구조, 입력표시는 수정할 수 없습니다.</strong>  </p>
+<ol>
+<li>
+<p>좌측 메뉴에서 &quot;스키마 관리&quot;를 클릭하면 스키마 관리화면으로 이동합니다.  
+</p>
+</li>
+<li>
+<p>스키마 목록에서 완료된 스키마를 클릭하면 스키마 상세화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema6.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;기본정보 수정&quot;버튼을 클릭하면 기본정보 수정화면으로 이동하며 기본정보를 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema7.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;입력구조 수정&quot;화면에서는 엘리먼트의 각 항목들을 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema8.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;입력표시 수정&quot;화면에서는 엘리먼트의 각 항목들을 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema9.jpg" />  
+</p>
+<blockquote>
+<p>위와같이 생성하면 아이템 제출화면에서는 아래와 같이 표시됩니다.  
+</p>
+</blockquote>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema10.jpg" /></p>
+</li>
+</ol>
+<p><a name="Chapter 3 : 조직 &amp; 컬렉션 관리"></a></p>
+<h1>Chapter 3 : 조직 &amp; 컬렉션 관리</h1>
+<p><strong>조직은 논리적(가상의 조직), 물리적인 조직 모두 가능합니다.</strong><br />
+<strong>하나 이상의 조직을 생성 할 수 있으며, 하나의 조직은 하나 이상의 컬렉션을 가질 수 있습니다.</strong>  </p>
+<p><a name="조직 생성"></a></p>
+<h2>조직 생성</h2>
+<p><strong>조직은 컬렉션이 속한 그룹으로, 조직생성 기능은 새로운 조직을 생성하는 기능을 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>좌측 메뉴에서 &quot;조직 &amp; 컬렉션 관리&quot; 메뉴를 클릭하면 조직, 컬렉션 목록을 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org1.jpg" />  
+</p>
+</li>
+<li>
+<p>목록 우측 상단의 &quot;조직 생성&quot;버튼을 클릭하면 조직의 기본정보 입력화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org2.jpg" />  
+</p>
+<blockquote>
+<p>조직 명 : 조직의 명칭입니다.<br />
+간략 설명 : 관리자용 조직 설명입니다.<br />
+소개글 : 이용자가 볼 수 있는 조직의 설명내용입니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>입력 후 &quot;조직 생성&quot;버튼을 클릭하면 조직 &amp; 컬렉션 목록에서 생성된 조직을 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org3.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="조직 관리"></a></p>
+<h2>조직 관리</h2>
+<p><strong>조직 관리 화면에서는 등록된 조직의 기본정보 수정 및 하위조직과 컬렉션의 '생성', '삭제' 기능을 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>&quot;조직 &amp; 컬렉션 관리&quot; 목록에서 특정 조직을 클릭하면 조직 상세화면으로 이동합니다. </p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org4.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;기본정보 수정&quot;버튼을 클릭하면 조직 기본정보를 수정할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>&quot;하위조직 생성&quot;버튼을 클릭하면 해당 조직의 하위조직을 생성할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org6.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;조직 삭제&quot;버튼을 클릭하면 삭제 확인 화면으로 이동하고, &quot;삭제&quot;버튼을 클릭하면 조직 삭제가 완료됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org7.jpg" />  
+</p>
+<blockquote>
+<p><font color="red">조직 삭제 시 조직에 속한 하위 조직, 컬렉션 및 아이템이 모두 삭제됩니다.</font><br />
+<font color="red">또한 접근권한, 제출권한, 검증권한과 관련된 정보도 모두 삭제됩니다.</font>  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="컬렉션 생성"></a></p>
+<h2>컬렉션 생성</h2>
+<p><strong>아이템을 제출하고 관리하는 기본단위인 컬렉션 생성이 필요할 경우, '컬렉션 생성'기능을 이용할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>조직관리 화면에서 &quot;컬렉션 생성&quot;버튼을 클릭하면 &quot;컬렉션 생성&quot;화면의 첫번째 단계인 &quot;생성 설정&quot;단계로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection1.jpg" />    
+</p>
+<blockquote>
+<p>읽기 접근권한 : 체크를 하지 않으면 &quot;권한설정&quot; 단계에서 컬렉션에 제출된 아이템에 접근할 수 있는 이용자나 그룹을 지정해야 합니다.  <br />
+제출권한 : 체크를 하면 &quot;권한설정&quot; 단계에서 컬렉션에 아이템을 제출할 수 있는 이용자나 그룹을 지정해야 합니다.  <br />
+검증권한 : 체크를 하면 &quot;권한설정&quot; 단계에서 컬렉션에 제출된 아이템에 대해 검증하는 이용자나 그룹을 지정해야 합니다.<br />
+아이템 생성 순서 : 선택에 따라 아이템 제출단계의 순서가 변경됩니다. &quot;일반&quot;은 '메타데이터 &gt; 파일업로드' 이며 &quot;파일우선&quot;은 '파일업로드 &gt; 메타데이터' 입니다.<br />
+파일다운로드 여부 : 아이템에 대한 첨부파일의 다운로드를 허용할지 여부를 선택합니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;기본정보 입력&quot;단계에서는 스키마에 대한 기본정보를 입력합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection2.jpg" />  
+</p>
+<blockquote>
+<p>스키마명 : 컬렉션의 메타데이터 스키마를 선택합니다. 선택한 스키마의 설정정보가 생성하고자 하는 컬렉션에 그대로 반영됩니다.<br />
+간략설명 : 관리자용 컬렉션 메모입니다.<br />
+소개글 : 이용자가 볼 수 있는 컬렉션 소개내용입니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;입력구조 설정&quot;단계에서는 선택된 스키마의 입력구조 설정을 바탕으로 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection3.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;입력표시 설정&quot;단계에서는 선택된 스키마의 입력표시 설정을 바탕으로 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection4.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;권한 설정&quot;단계에서는 &quot;생성 설정&quot;단계에서 체크한 설정으로 단계가 표시됩니다.<br />
+더 이상 권한을 설정할 단계가 없으면 &quot;컬렉션 생성 완료&quot;버튼이 표시되며, 클릭 시 컬렉션 생성이 완료됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection5.jpg" />  
+</p>
+<blockquote>
+<p>&quot;접근권한&quot; : 컬렉션에 제출된 아이템을 읽을 권한을 이용자와 그룹에 부여합니다.<br />
+&quot;제출권한&quot; : 컬렉션에 아이템을 제출할 권한을 이용자와 그룹에 부여합니다.<br />
+&quot;검증권한&quot; : 제출 완료된 아이템에 대해 승인하는 권한을 이용자와 그룹에 부여합니다. 검증자를 선택 후 &quot;컬렉션 생성 완료&quot;버튼을 클릭하면 대표 검증자를 선택하는 화면이 표시됩니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="컬렉션 관리"></a></p>
+<h2>컬렉션 관리</h2>
+<p><strong>컬렉션 관리 기능은 등록된 컬렉션의 '수정' 및 '삭제'기능을 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>조직 &amp; 컬렉션 목록에서 특정 컬렉션을 클릭하면 컬렉션 상세화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection6.jpg" />  
+</p>
+</li>
+<li>
+<p>컬렉션 상세화면에서 &quot;기본정보 수정&quot;버튼을 클릭하여 컬렉션 기본정보를 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection7.jpg" />  
+</p>
+</li>
+<li>
+<p>컬렉션 상세화면에서 각 권한별 우측 &quot;수정&quot;버튼을 클릭하여 해당 권한의 소속 이용자/그룹을 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection8.jpg" />  
+</p>
+</li>
+<li>
+<p>컬렉션 상세화면에서 수집설정의 &quot;수정&quot;버튼을 클릭하여 수집 설정을 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection10.jpg" />  
+</p>
+<blockquote>
+<p>OAI Provider에는 OAI-PMH로 메타데이터를 제공하는 Provider의 URL을 입력하세요.<br />
+OAI SetId에는 OAI Provider에서 제공하는 Set을 입력하세요. 예) all<br />
+Metadata Prefix에는 OAI Provider에서 제공하는 Prefix값을 입력하세요. 예) oai_dc, mets  
+</p>
+</blockquote>
+</li>
+<li>
+<p>컬렉션 상세화면에서 수집설정의 &quot;상세 보기&quot;버튼을 클릭하여 수집 이력을 확인할 수 있습니다. 수집설정이 외부정보원으로 부터 콘텐츠를 수집하는것으로 설정되었을 때만 정보가 저장됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection9.jpg" />  
+</p>
+</li>
+<li>
+<p>컬렉션 상세화면에서 &quot;입력구조 수정&quot;버튼을 클릭하여 엘리먼트의 각 항목들을 수정할 수 있습니다. 단, 컬렉션에 제출된 아이템이 있을 경우 수정할 수 없습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection11.jpg" />  
+</p>
+</li>
+<li>
+<p>컬렉션 상세화면에서 &quot;입력표시 수정&quot;버튼을 클릭하여 엘리먼트의 각 항목들을 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection12.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 4 : 아이템 관리"></a></p>
+<h1>Chapter 4 : 아이템 관리</h1>
+<p><a name="아이템 관리"></a></p>
+<h2>아이템 관리</h2>
+<p><strong>아이템 관리 기능은 제출된 아이템에 대한 메타데이터 및 첨부파일 등을 '관리'하는 기능을 제공합니다. 제출 완료된 아이템 이므로 '수정', '삭제'를 주의 해주시기 바랍니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 메뉴에서 &quot;아이템 관리&quot; 메뉴를 클릭하여 제출된 아이템 리스트를 조회할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm1.jpg" />  
+</p>
+</li>
+<li>
+<p>목록에서 특정 아이템을 클릭하면 아이템 상세화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm2.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 &quot;기본설정 수정&quot;버튼으로 현재 아이템의 기본정보를 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm3.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 &quot;접근권한 수정&quot;버튼으로 현재 아이템의 접근권한을 수정할 수 있습니다. 접근권한은 아이템 생성 시 컬렉션으로 상속받은 권한을 기본으로 가집니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm4.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 &quot;아이템 이동&quot;버튼으로 현재 아이템이 이동될 컬렉션 선택과 그 컬렉션의 권한을 아이템에 적용할지에 대한 설정을 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm5.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 &quot;아이템 철회&quot;버튼을 통해 현재 아이템을 철회상태로 변경하여 더 이상 이용자 시스템에서 조회되지 않도록 합니다.  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 &quot;인쇄&quot;버튼으로 현재 아이템정보를 인쇄할 수 있으며, &quot;반출하기&quot;버튼으로 현재 아이템의 기본 정보를 텍스트 또는 엑셀파일로 저장 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm6.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 메타데이터 정보의 &quot;수정&quot;버튼을 클릭하여 현재 아이템의 메타데이터 정보를 수정할 수 있습니다.   
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm7.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 첨부파일 정보의 &quot;수정&quot;버튼을 클릭하여 현재 아이템의 첨부파일을 추가/삭제 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm8.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세 화면에서 첨부파일의 &quot;보기&quot;버튼으로 미리보기가 가능한 파일을 볼 수 있으며, &quot;다운로드&quot;버튼으로 파일을 다운로드 할 수 있습니다.  
+</p>
+</li>
+</ol>
+<p><a name="철회 아이템 관리"></a></p>
+<h2>철회 아이템 관리</h2>
+<p><strong>철회된 아이템의 '수정', '제출상태 복구'기능을 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>&quot;아이템 관리&quot; 목록 아래의 &quot;철회 아이템 관리&quot;버튼으로 철회아이템 목록을 조회합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm9.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템의 &quot;아이템 수정&quot;버튼을 클릭하여 메타데이터 수정화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm10.jpg" />  
+</p>
+<blockquote>
+<p>&quot;아이템 복구&quot;버튼으로 아이템의 상태를 되돌릴 수 있습니다.<br />
+&quot;아이템 이동&quot;버튼으로 현재 아이템의 컬렉션을 변경할 수 있습니다. 컬렉션을 이동해도 제출상태는 '철회'로 유지됩니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 5 : 아이템 반입"></a></p>
+<h1>Chapter 5 : 아이템 반입</h1>
+<p><a name="아이템 반입"></a></p>
+<h2>아이템 반입</h2>
+<p><strong>엑셀파일로 작성된 다수의 아이템에 대한 메타데이터 정보를 반입하여 아이템으로 저장합니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 메뉴에서 &quot;아이템 반입&quot; 메뉴를 클릭하여 아이템 반입 화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemimport1.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 반입 입력항목을 입력한 후 반입파일의 &quot;파일찾기&quot;버튼으로 반입 엑셀파일을 선택하고, &quot;반입처리&quot;버튼을 클릭하여 반입합니다.  
+</p>
+<blockquote>
+<p>반입을 위한 설정정보들은 이용자 매뉴얼의 아이템 반입과 동일합니다.<br />
+반입처리 후 화면 아래의 &quot;아이템 반입이력&quot;목록에 반입내용이 표시됩니다.<br />
+반입된 아이템은 &quot;아이템보기&quot;버튼으로 확인하고, 오류로 반입이 안된 항목은 &quot;로그보기&quot;버튼으로 확인할 수 있습니다.  
+</p>
+<p><strong>[반입 엑셀파일 작성방법]</strong><br />
+엑셀파일의 첫번째 행은 '엘리먼트명'이 들어가야 하며, 하위엘리먼트는 상위엘리먼트명 뒤에 '.'으로 구분지어 연결하여 입력합니다.<br />
+예) 'description'이 상위엘리먼트이고 'abstract'가 하위엘리먼트일 경우 : description.abstract<br />
+엑셀파일의 두번째 행부터는 엘리먼트 명에 맞는 메타데이터를 입력합니다.  
+</p>
+</blockquote>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemimport2.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 6 : 이용자 관리"></a></p>
+<h1>Chapter 6 : 이용자 관리</h1>
+<p><a name="이용자 관리"></a></p>
+<h2>이용자 관리</h2>
+<p><strong>등록된 이용자에 대한 '검색'과 '기본정보를 수정'하는 기능을 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 메뉴에서 &quot;이용자 관리&quot; 메뉴를 클릭하여 이용자 관리화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/useredit1.jpg" />  
+</p>
+</li>
+<li>
+<p>'이메일', '성명', '부서', '제출권한 요청' 등의 조건으로 이용자 검색을 할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>&quot;이용자 추가&quot;버튼으로 이용자를 신규 등록할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/useredit2.jpg" />  
+</p>
+<blockquote>
+<p>이메일 : 이용자가 로그인 하거나, 알림을 받을 주소입니다.<br />
+성명 : 이용자의 성명입니다.<br />
+부서 : 이용자의 소속부서입니다. 소속부서는 코드관리에서 관리할 수 있습니다.<br />
+전화번호 : 이용자의 전화번호입니다.<br />
+아이템 제출권한 요청 : 아이템 제출권한을 요청하는 상태로 이용자 등록시 요청을 하면 선택이 됩니다. 제출권한을 요청한 이용자에게 제출권한을 부여한 후 체크를 해제해 주십시오.<br />
+접속허용 : 이용자의 로그인 가능여부를 선택합니다. 체크를 해제하면 이용자의 로그인이 허용되지 않습니다.<br />
+* 이용자 추가 시 이용자의 비밀번호는 이용자 이메일의 id부분으로 적용됩니다.<br />
+* 예) user1@gmail.com 이면 'user1'이 비밀번호가 됩니다.</p>
+</blockquote>
+</li>
+<li>
+<p>이용자 리스트 우측의 &quot;수정&quot;버튼을 클릭하여 이용자별 수정 및 삭제를 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/useredit3.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 7 : 그룹 관리"></a></p>
+<h1>Chapter 7 : 그룹 관리</h1>
+<p><a name="그룹 관리"></a></p>
+<h2>그룹 관리</h2>
+<p><strong>이용자가 소속되는 그룹을 관리할 수 있습니다. 특정 권한을 그룹에 부여하면 소속 이용자는 모두 권한을 부여받습니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 메뉴에서 &quot;그룹 관리&quot; 메뉴를 클릭하여 그룹 관리화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/group1.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;새 그룹 추가&quot;버튼을 클릭하여 그룹을 생성할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/group2.jpg" />  
+</p>
+</li>
+<li>
+<p>그룹 우측의 &quot;수정&quot;버튼을 클릭하여 그룹을 수정할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/group3.jpg" />  
+</p>
+<blockquote>
+<p>'Administrator'그룹은 관리자 그룹입니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>그룹 우측의 &quot;삭제&quot;버튼을 클릭하여 그룹을 삭제할 수 있습니다. 그룹을 삭제해도 이용자 정보는 삭제되지 않습니다.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 8 : 통계 관리"></a></p>
+<h1>Chapter 8 : 통계 관리</h1>
+<p><a name="통계 관리"></a></p>
+<h2>통계 관리</h2>
+<p><strong>아이템 제출 현황과 이용자 접속현황을 그래프와 수치로 확인할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 &quot;통계 관리&quot; 메뉴를 클릭하여 통계화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/statistics1.jpg" />  
+</p>
+<blockquote>
+<p>'컬렉션별 구축현황'탭은 컬렉션별 아이템 제출상태와 제출수를 확인합니다.<br />
+'기간별 구축현황'탭은 기간별로 구축된 아이템 수를 확인합니다.<br />
+'이용자접속현황'탭은 기간별 이용자 접속횟수를 확인합니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 9 : 코드 관리"></a></p>
+<h1>Chapter 9 : 코드 관리</h1>
+<p><a name="코드 관리"></a></p>
+<h2>코드 관리</h2>
+<p><strong>아이템 제출, 이용자 등록 등 P-CUBE에 사용되는 코드를 관리할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 &quot;코드 관리&quot; 메뉴를 클릭하여 코드 관리화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/code1.jpg" />  
+</p>
+</li>
+<li>
+<p>코드 그룹, 코드명 별로 검색을 할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>&quot;코드추가&quot;버튼으로 새로운 코드를 생성 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/code2.jpg" />  
+</p>
+<blockquote>
+<p>순서 : 그룹내에서 코드의 정렬순서를 나타냅니다.<br />
+그룹 : 코드그룹을 선택할 수 있습니다.<br />
+코드 : 내부적으로 사용하는 코드의 고유 값입니다.<br />
+코드명 : 화면에 보여지는 코드의 명칭입니다.<br />
+설명 : 코드에 대한 설명입니다.<br />
+속성1, 속성2 : 코드의 부가적인 속성을 입력합니다. 특히 주제분류의 경우 속성2에 이미지경로를 입력해야 합니다.  
+</p>
+<p>코드그룹의 추가는 DBMS를 직접 수정해야 하므로 해당 기관의 개발자에게 문의하여 추가하실 수 있습니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>코드 우측의 &quot;변경&quot;버튼으로 코드를 수정할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>코드 우측의 &quot;삭제&quot;버튼으로 코드를 삭제할 수 있습니다.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 10 : 공지사항 관리"></a></p>
+<h1>Chapter 10 : 공지사항 관리</h1>
+<p><a name="공지사항 관리"></a></p>
+<h2>공지사항 관리</h2>
+<p><strong>메인화면에 공지되는 공지사항을 '작성' 하거나 '수정' 할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 &quot;공지사항 관리&quot; 메뉴를 클릭하여 공지사항 관리화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/news1.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;글쓰기&quot;버튼으로 새로운 공지사항을 작성 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/news2.jpg" />  
+</p>
+<blockquote>
+<p>제목 : 공지사항의 제목입니다.<br />
+내용 : 공지사항의 상세내용입니다.<br />
+파일 : 공지사항에 추가되는 첨부파일입니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>공지사항을 클릭하여 작성된 공지사항을 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/news3.jpg" />  
+</p>
+</li>
+<li>
+<p>공지사항 상세화면에서 &quot;공지사항 수정&quot;버튼으로 공지사항을 수정할 수 있으며, &quot;공지사항 삭제&quot;버튼으로 공지사항을 삭제할 수 있습니다.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 11 : 환경 설정"></a></p>
+<h1>Chapter 11 : 환경 설정</h1>
+<p><a name="환경 설정"></a></p>
+<h2>환경 설정</h2>
+<p><strong>사이트의 기본적인 설정에 대한 변수를 수정 할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 &quot;환경 설정&quot; 메뉴를 클릭하여 환경 설정화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/setup1.jpg" />  
+</p>
+<blockquote>
+<p>웹사이트의 제목 : 웹 브라우저의 탭에 표시되는 제목입니다.<br />
+기관로고 : 화면의 우측상단에 위치하는 기관/부서의 로고입니다.<br />
+페이지 하단<br />
+- 이미지 파일 : 파일은 페이지 아래부분에 표시될 로고입니다.<br />
+- 상단 내용 : 페이지 아래의 정보 중 첫번째 줄에 표시될 정보입니다. 예) 기관주소<br />
+- 하단 내용 : 페이지 아래의 정보 중 두번째 줄에 표시될 정보입니다. 예) copyright<br />
+리포지터리 명칭 : 아이템 제출 시 'Publisher' 메타데이터로 이용합니다.<br />
+관리자 정보<br />
+- 이름 : 시스템 관리자의 성명입니다.<br />
+- 이메일 : 시스템 관리자의 E-mail입니다.<br />
+- 전화번호 : 시스템 관리자의 전화번호입니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 12 : 시스템 모니터링"></a></p>
+<h1>Chapter 12 : 시스템 모니터링</h1>
+<p><a name="시스템 모니터링"></a></p>
+<h2>시스템 모니터링</h2>
+<p><strong>P-CUBE가 설치된 서버의 CPU, Memory, Storage 등의 상태정보를 주기적으로 확인한 정보를 제공하여, 운영서버의 부하를 확인할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>화면 좌측의 &quot;시스템 모니터링&quot; 메뉴를 클릭하여 시스템 모니터링화면으로 이동합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/monitor1.jpg" /></p>
+<blockquote>
+<p>cube.cfg(P-CUBE의 설정파일로 개발자 매뉴얼에 상세히 기술되어 있습니다.)의 설정에 따라서 사용하지 않을 수 있습니다.<br />
+조회일자로 기간별 검색을 할 수 있습니다. (Storage의 경우 조회월)<br />
+그래프에 마우스 커서를 놓으면 해당 일자와 데이터가 보여집니다. 클릭하면 해당 일자의 검사주기별 데이터가 보여집니다.<br />
+cube.cfg의 설정으로 위험수치에 도달하면 관리자의 메일로 알림메일이 전송될 수 있습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

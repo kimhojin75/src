@@ -1,0 +1,1012 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Administrator_Manual_eng_2013.11.28,2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{margin:0;padding:0;}
+body {
+         font:13.34px helvetica,arial,freesans,clean,sans-serif;
+         color:black;
+         line-height:1.4em;
+         background-color: #F8F8F8;
+         padding: 0.7em;
+}
+p {
+         margin:1em 0;
+         line-height:1.5em;
+}
+table {
+         font-size:inherit;
+         font:100%;
+         margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono",monospace;}
+pre {
+         margin:1em 0;
+         font-size:12px;
+         background-color:#eee;
+         border:1px solid #ddd;
+         padding:5px;
+         line-height:1.5em;
+         color:#444;
+         overflow:auto;
+         -webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+         padding:0;
+         font-size:12px;
+         background-color:#eee;
+         border:none;
+}
+code {
+         font-size:12px;
+         background-color:#f8f8ff;
+         color:#444;
+         padding:0 .2em;
+         border:1px solid #dedede;
+}
+img{border:1px solid gray;;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:4em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:2em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+h4{font-size:130%;padding-top:1.5em;text-align:center;}
+h5{font-size:150%;padding-top:.5em;padding-left:20px;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+   font-size: 0.83em;
+   vertical-align: super;
+   line-height: 0;
+}
+* {
+         -webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+   body {
+      width: 854px;
+      margin:0 auto;
+   }
+}
+@media print {
+         table, pre {
+                  page-break-inside: avoid;
+         }
+         pre {
+                  word-wrap: break-word;
+         }
+}
+
+#toc {
+	list-style: none;
+	margin-bottom: 20px;
+}
+#toc li {
+	background: url(dot.gif) repeat-x bottom left;
+	overflow: hidden;
+	padding-bottom: 2px;
+	font-size:100%;
+}
+#toc a,
+#toc span {
+	display: inline-block;
+	background: #fff;
+	position: relative;
+	bottom: -4px;
+	color:black;
+}
+#toc a {
+	float: left;
+}
+#toc span {
+	float: left;
+	padding: 0 2px 3px 0;
+}
+
+
+
+
+/* Main style for the table */
+
+.dp-highlighter
+{
+	font-family: "Courier New" , Courier, mono;
+	font-size: 12px;
+	border: 1px solid #4e4747;
+	background-color: #fff;
+	width: 99%;
+	overflow: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.dp-highlighter .bar
+{
+	padding-left: 45px;
+}
+
+.dp-highlighter.collapsed .bar, .dp-highlighter.nogutter .bar
+{
+	padding-left: 0px;
+}
+
+.dp-highlighter ol
+{
+	margin: 0px 0px 1px 5px; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+	padding: 0px;
+	color: #4e4747;
+}
+
+.dp-highlighter.nogutter ol
+{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.dp-highlighter ol li, .dp-highlighter .columns div
+{
+	border-left: 0px;
+	background-color: #fff;
+	padding-left: 10px;
+	line-height: 14px;
+}
+
+.dp-highlighter.nogutter ol li, .dp-highlighter.nogutter .columns div
+{
+	border: 0;
+}
+
+.dp-highlighter .columns
+{
+	color: gray;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dp-highlighter .columns div
+{
+	padding-bottom: 5px;
+}
+
+.dp-highlighter ol li.alt
+{
+	background-color: #f8f8f8;
+}
+
+.dp-highlighter ol li span
+{
+	color: Black;
+}
+
+/* Adjust some properties when collapsed */
+
+.dp-highlighter.collapsed ol
+{
+	margin: 0px;
+}
+
+.dp-highlighter.collapsed ol li
+{
+	display: none;
+}
+
+/* Additional modifications when in print-view */
+
+.dp-highlighter.printing
+{
+	border: none;
+}
+
+.dp-highlighter.printing .tools
+{
+	display: none !important;
+}
+
+.dp-highlighter.printing li
+{
+	display: list-item !important;
+}
+
+/* Styles for the tools */
+
+.dp-highlighter .tools
+{
+	padding: 3px 8px 3px 10px;
+	border-bottom: 1px solid #2B91AF;
+	font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: silver;
+}
+
+.dp-highlighter.collapsed .tools
+{
+	border-bottom: 0;
+}
+
+.dp-highlighter .tools a
+{
+	font-size: 9px;
+	color: gray;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.dp-highlighter .tools a:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* About dialog styles */
+
+.dp-about { background-color: #fff; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; width: 60px; height: 22px; }
+
+/* Language specific styles */
+
+.dp-xml {}
+.dp-xml .cdata { color: #ff1493; }
+.dp-xml .comments { color: green; }
+.dp-xml .tag { font-weight: bold; color: blue; }
+.dp-xml .tag-name { color: black; font-weight: bold; }
+.dp-xml .attribute { color: red; }
+.dp-xml .attribute-value { color: blue; }
+
+</style>
+</head>
+<body>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/Administrator_Manual.jpg" />
+<br></p>
+<h4>- Table of Contents -</h4>
+<ul id="toc">
+<li><span><a href="#The comprehensive understanding of P-CUBE">The comprehensive understanding of P-CUBE</a></span> </li>
+<li><span><a href="#Chapter 1 : Function of P-CUBE Administrator">Chapter 1 : Function of P-CUBE Administrator</a></span></li>
+<li><span><a href="#Account and Authority of Administrator">&nbsp;&nbsp; - Account and Authority of Administrator</a></span></li>
+<li><span><a href="#Chapter 2 : Schema management">Chapter 2 : Schema management</a></span></li>
+<li><span><a href="#Schema creation">&nbsp;&nbsp; - Schema creation</a></span></li>
+<li><span><a href="#Schema management">&nbsp;&nbsp; - Schema management</a></span></li>
+<li><span><a href="#Chapter 3 : Organization & Collection management">Chapter 3 : Organization & Collection management</a></span></li>
+<li><span><a href="#Organization Creation">&nbsp;&nbsp; - Organization Creation</a></span></li>
+<li><span><a href="#Organization Management">&nbsp;&nbsp; - Organization Management</a></span></li>
+<li><span><a href="#Creating collection">&nbsp;&nbsp; - Creating collection</a></span></li>
+<li><span><a href="#Collection Management">&nbsp;&nbsp; - Collection Management</a></span></li>
+<li><span><a href="#Chapter 4 : Item management">Chapter 4 : Item management</a></span></li>
+<li><span><a href="#Item management">&nbsp;&nbsp; - Item management</a></span></li>
+<li><span><a href="#Management of a withdrew item">&nbsp;&nbsp; - Management of a withdrew item</a></span></li>
+<li><span><a href="#Chapter 5 : Importing items">Chapter 5 : Importing items</a></span></li>
+<li><span><a href="#Importing items">&nbsp;&nbsp; - Importing items</a></span></li>
+<li><span><a href="#Chapter 6 : User Management">Chapter 6 : User Management</a></span></li>
+<li><span><a href="#User Management">&nbsp;&nbsp; - User Management</a></span></li>
+<li><span><a href="#Chapter 7 : Group Management">Chapter 7 : Group Management</a></span></li>
+<li><span><a href="#Group Management">&nbsp;&nbsp; - Group Management</a></span></li>
+<li><span><a href="#Chapter 8 : Statistics Management">Chapter 8 : Statistics Management</a></span></li>
+<li><span><a href="#Statistics Management">&nbsp;&nbsp; - Statistics Management</a></span></li>
+<li><span><a href="#Chapter 9 : Code Management">Chapter 9 : Code Management</a></span></li>
+<li><span><a href="#Code management">&nbsp;&nbsp; - Code management</a></span></li>
+<li><span><a href="#Chapter 10 : Notice Management">Chapter 10 : Notice Management</a></span></li>
+<li><span><a href="#Notice Management">&nbsp;&nbsp; - Notice Management</a></span></li>
+<li><span><a href="#Chapter 11 : Environment Settings">Chapter 11 : Environment Settings</a></span></li>
+<li><span><a href="#Environment Settings">&nbsp;&nbsp; - Environment Settings</a></span></li>
+<li><span><a href="#Chapter 12 : System monitoring">Chapter 12 : System monitoring</a></span></li>
+<li><span><a href="#System monitoring">&nbsp;&nbsp; - System monitoring</a></span></li>
+</ul>
+<p><br><br>
+<a name="The comprehensive understanding of P-CUBE"></a></p>
+<h2>The comprehensive understanding of P-CUBE</h2>
+<ol>
+<li>
+<p>The understanding of item submission/verification process<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt1_eng.jpg" />  
+</p>
+<blockquote>
+<p>A data submitter submits an item.<br />
+A user assigned as a data verifier verifies data of other users.<br />
+Administrator creates a collection where the submitted items are managed.<br />
+Administrator creates metadata of the submitted items.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>The understanding of relations of schema and collection.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Original schema, 'S', connected to more than one collection can not be edited.<br />
+Schema (MS1) of a collection where more than one items is submitted can not be edited.<br />
+Schema (MS2) of a collection without items submitted can be edited.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>P-CUBE data model<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt3.jpg" />  
+</p>
+</li>
+<li>
+<p>The understanding of item submission/verification authority<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ppt4_eng.jpg" />  
+</p>
+<blockquote>
+<p>Administrator can assign the access of the related collection, submission of items, and the method of verification as creating collections.<br />
+You can allow everyone to have access to search collection, or only certain users.<br />
+You can allow everyone to submit items to collection, or only certain users.<br />
+If the verification process of submitted item to collection is needed, you can include verification process, similar to the process of peer-review of thesis paper.<br />
+If the verification process is not needed, items submitted to collection is disclosed to search service, right after the submission of an item is completed.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 1 : Function of P-CUBE administrator"></a></p>
+<h1>Chapter 1 : Function of P-CUBE administrator</h1>
+<p><a name="Account and Authority of Administrator"></a></p>
+<h2>Account and Authority of Administrator</h2>
+<p><strong>Administrator authority is needed to access the system of administrator.</strong>  </p>
+<ol>
+<li>
+<p>The image below is information of log-in, printed differently according to availability of administrator authority at user website. The left is administrator and the right one is user. Clicking &quot;Go Admin Site&quot; link which only shows to administrators, it will move to the main screen of administorator.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/login1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>It is log-in information displayed at administrator screen, when you log in as an account with administrator authority. It will move to website of user, clicking &quot;Go User Site&quot; link.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/login2_eng.jpg" />  
+</p>
+<blockquote>
+<p>P-CUBE offers user system and administrator system as additional URL system.<br />
+The link to move to adminstrator website is displayed only for those users who have administrator authority.<br />
+You can assign administration authority other users through group management function.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 2 : Schema management"></a></p>
+<h1>Chapter 2 : Schema management</h1>
+<p><strong>A data submitter submits an item to the collection where the submission authority is assgined and information on item submitting, using the metadata field assigned to schema.</strong><br />
+<strong>Schema management which assigns fields to input when submitting an item is described below.</strong>  </p>
+<p><a name="Schema creation"></a></p>
+<h2>Schema creation</h2>
+<p><strong>It provides function to create schema, a collection of structure of metadata and display settings.</strong><br />
+<strong>All collections have one schema.</strong>    </p>
+<ol>
+<li>
+<p>Click &quot;Schema Management&quot; on the left menu to move to management screen of schema.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>It will move to &quot;basic information&quot; input screen, clicking &quot;New creation of schema&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Schema name : name of title.<br />
+Namespace : It is used for creating structure such xml, xsd file and etc, as namespace of schema.<br />
+Schema descriptions : It is a description of Schema.<br />
+Original schema : Select Schema for reference, creating elements of schema. Selected element of schema is applied to &quot;input structure setting&quot; stage.<br />
+Reference namespace : It is used for creating structure of xml, csd file, as reference namespace of schema.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can set element structure of schema on setting screen of input structure.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema3_eng.jpg" />  
+</p>
+<blockquote>
+<p>XSD Import : Importing element information using XSD file.<br />
+DTD Import : Importing element information using DTD file.<br />
+Add Factor : Adding element<br />
+Add Children : Adding sub-element of selected element.<br />
+Selective Deletion : Deleting selected element.<br />
+Move Up : Changing the position upward. The position is changed by elements of same level.<br />
+Move Down : Changing the position downward. The position is changed by elements of same level.<br />
+Spread View: Showing all the element information including closed elements with spread view.<br />
+Save : Saving the element information of current state.  
+</p>
+<p>Input : Setting whether to display element or not when inputting metadata in the step of item submitting.<br />
+Necessariness : Setting for required input field, as inputting metadata in the step of item submitting.<br />
+Repetition : Settings you can add and input element, as inputting metadata in the step of item submitting.<br />
+Attribute : Displaying that it is a field corresponding with attribute of XML.<br />
+Index Field : Indexing &quot;Element&quot; field with designated meaning to 'index field'.<br />
+Page Division : The page of metadata input is divided by element displayed.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can set names, and input formation of element displayed when inputting metadata in the state of item submitting stage on displaying input setting screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema4_eng.jpg" />  
+</p>
+<blockquote>
+<p>Field Display Name : Displayed as element name.<br />
+Input Formation : Setting for input formation of element value.<br />
+Selective Field : It is information of list displayed when the input formation is &quot;dropdown&quot;.<br />
+Help : It shows explanation on each element.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can check information input during the schema creation stage on preview screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema5_eng.jpg" />  
+</p>
+<blockquote>
+<p>Schema creation will be completed by clicking &quot;completion&quot; button. And you can check schema created from the schema list.<br />
+The uncompleted schema will be shown as &quot;In the process of working&quot; on the schema.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Schema management"></a></p>
+<h2>Schema management</h2>
+<p><strong>It supplies functions managing basic information, input structure, and display of schema nelwy created through new creation of schema.</strong><br />
+<strong>You can not edit input structure and display if there is a collection mappedwith schema.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;Schema Management&quot; on the left menu to move to management screen of schema.  
+</p>
+</li>
+<li>
+<p>Click completed schema from the list of schema to move to detailed screen of schema.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema6_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Click &quot;edit basic information&quot; button to move to basic edit screen and edit the basic information.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema7_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit each field of element on &quot;edit input structure&quot;.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema8_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit each field of element on &quot;edit input display&quot;.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema9_eng.jpg" />  
+</p>
+<blockquote>
+<p>If it is created as above, it will show as belows on the item submission screen.  
+</p>
+</blockquote>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/schema10_eng.jpg" /></p>
+</li>
+</ol>
+<p><a name="Chapter 3 : Organization &amp; Collection management"></a></p>
+<h1>Chapter 3 : Organization &amp; Collection management</h1>
+<p><strong>Organization can be both logical (virtual organization) and physical.</strong><br />
+<strong>You can create more than one organization, and one organization can get more than one collection.</strong>  </p>
+<p><a name="Organization Creation"></a></p>
+<h2>Organization Creation</h2>
+<p><strong>Organization is a group where collection is affiliated. The function of creating organization provides functions for creating new organization.</strong>  </p>
+<ol>
+<li>
+<p>You can check organization and collection list, clicking &quot;organization and collection management&quot; from the left menu.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>It will move to the &quot;basic information&quot; input screen of organization, clicking &quot;Creating Organization&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Organization name : Name of an organization.<br />
+A brief account : It is a description for administrator.<br />
+Introduction writing : It is a description of an organization for users.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can check the created organization from the organization &amp; collection list, after inputting and clicking &quot;Creating Organization&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org3_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Organization Management"></a></p>
+<h2>Organization Management</h2>
+<p><strong>It provides basic information editting of registered organization, and &quot;create&quot; and &quot;delete&quot; functions of sub-organization and collection on organization management screen.</strong>  </p>
+<ol>
+<li>
+<p>Clicking a certain organization from the &quot;Organization &amp; Collection Management&quot; list, it will move to a detailed screen of organization. </p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org4_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit the basic information of organization, clicking &quot;edit basic information&quot; button.  
+</p>
+</li>
+<li>
+<p>You can create sub-organization of the related organization, clicking &quot;creating sub-organization&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org6_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>It will move to the screen of checking delete, clicking &quot;delete organization&quot; button.  Click &quot;delete&quot; button to delete organization.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/org7_eng.jpg" />  
+</p>
+<blockquote>
+<p><font color="red">When deleting organization, all sub-organizations from organization, collections and items will be deleted.</font><br />
+<font color="red">Also the information about authorities of access, submission, and verification will be deleted.</font>  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Creating collection"></a></p>
+<h2>Creating collection</h2>
+<p><strong>You can use 'creating collection' function, in case of creating collection which is a basic unit for submitting and managing item is needed.</strong>  </p>
+<ol>
+<li>
+<p>It will move to &quot;creation setting&quot; stage, the first step for &quot;creating collection&quot; screen, if you click &quot;creating collection&quot; button on organization management screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection1_eng.jpg" />  
+</p>
+<blockquote>
+<p>Access authority for reading : User or group who can access to submitted item to collection should be assigned at &quot;Authority Setting&quot; stage, if unchecked.  <br />
+Submission authority : You have to assign a user or a group submitting item to collection at &quot;authority setting&quot; stage if checked.  <br />
+Verification Authority : You have to assign a user or a group verifying an item submitted to collection at the&quot;authority setting&quot; stage, if checked.<br />
+Order of creating item : The order of item submission stage is changed according to selection. &quot;General&quot; is 'metadata &gt; file upload' and &quot;File first&quot; is File upload &gt; metadata'.<br />
+File Downloading or not : Selecting whether to allow downloading of an attached file on item.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Input the basic information on schema at the &quot;basic information input&quot; stage.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Schema Name : Select metadata schema of collection. Selected setting information reflects to collection that you wish to create.<br />
+Brief explanation : A collection memo for administrator.<br />
+Introduction : Introduction of collection that user can see.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can edit based on settings for input structure of schema selected at &quot; input structure setting&quot; stage.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection3_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit based on settings for input display of schema selected at &quot; input display setting&quot; stage.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection4_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>The stage will be displayed as checked at the &quot;creation settings&quot; stage, at the &quot;author setting&quot; stage.<br />
+If there is no more stages to set authority, It will display &quot;Completion of creating collection&quot;.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection5_eng.jpg" />  
+</p>
+<blockquote>
+<p>&quot;Access Authority&quot; : It assigns authority of reading items submitted to collection to users and groups.<br />
+&quot;Submission Authority&quot; : It assigns authority of submitting items to collection to users and groups.<br />
+&quot;Verification Authority&quot; : It assigns authority of approving the item completed submission to users and groups. Clicking &quot;Completion of creating collection&quot; button after selecting a verifier, the screen, selecting a representative verifier will be shown.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Collection Management"></a></p>
+<h2>Collection Management</h2>
+<p><strong>Collection management function offers functions of 'edit' and delete' of collection registered.</strong>  </p>
+<ol>
+<li>
+<p>It will move to collection detailed screen as clicking certain collection from the organization &amp; collection list.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection6_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit collection basic information as clicking &quot;Edit basic information&quot; from the collection detailed screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection7_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit users and groups from the related authority, as clicking &quot;edit&quot; button on the right by each authority from collection detailed screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection8_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit harvest setting, as clicking &quot;edit&quot; button of harvest setting from collection detailed screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection10_eng.jpg" />  
+</p>
+<blockquote>
+<p>Input URL of Provider offering metadata with OAI-PMH into OAI Provider.<br />
+Input Set offered at OAI Provider into OAI Setld. E.g.) all<br />
+Input prefix value offered from OAI Provider into Metadata Prefix. E.g.) oai_dc, mets  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can check harvest history, as clicking &quot;view details&quot; button of harvest settings from the collection detailed screen. The information is saved only when the harvest setting is set as harvesting when the contents is from external source.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection9_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit each field of element, as clicking &quot;edit input structure&quot; from the collection detailed screen. However, you can not edit when there is an item submitted to collection.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection11_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit each filed of element, clicking &quot;edit input display&quot; from the collection detailed screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/collection12_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 4 : Item management"></a></p>
+<h1>Chapter 4 : Item management</h1>
+<p><a name="Item management"></a></p>
+<h2>Item management</h2>
+<p><strong>Function of item management offers functions to 'manage' metadata and attached file on submitted item. Please use caution to 'edit' and 'delete', since the item is already submitted.</strong>  </p>
+<ol>
+<li>
+<p>You can check submitted item list, clicking &quot;item management&quot; menu from menu of the left screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>It will move to a detailed screen of item, clicking certain item from the list.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit basic information of current item with &quot;edit basic setting&quot; from the detailed screen of item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm3_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit the access authority of current item with &quot;Edit access authority&quot; on detailed screen of item. Access authority is assigned with authority received from collection when creating item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm4_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>With &quot;item move&quot; button from the detailed screen of item, you can set selecting collection where current item to be moved to, and whether to applicate the authority of the collection to item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm5_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Change current item to the state of withdrawal through &quot;item withdrawal&quot; button on detailed screen of item, so that it will not be searched any more at user system.  
+</p>
+</li>
+<li>
+<p>You can print current item information with &quot;Print&quot; button on detailed screen of item, and save the basic information of current item as text or excel file with &quot;export&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm6_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit metadata information of current item with &quot;edit&quot; button of metadata information from the detailed screen of item.   
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm7_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can add or delete attached file of current item, clicking &quot;edit&quot; button from information of attached file on detailed screen of item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm8_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can view files available for preview with &quot;view&quot; button of attached file on detailed screen of item.  
+</p>
+</li>
+</ol>
+<p><a name="Management of a withdrew item"></a></p>
+<h2>Management of a withdrew item</h2>
+<p><strong>It offers functions of 'edit' and 'restoring submission status' of item withdrew.</strong>  </p>
+<ol>
+<li>
+<p>Search withdrew item list with &quot;withdrew item management&quot; button from the &quot;item management&quot; list below.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm9_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Move to metadata setting screen, clicking &quot;item edit&quot; button of item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemadm10_eng.jpg" />  
+</p>
+<blockquote>
+<p>You can restore the status of item with &quot;restore item&quot;.<br />
+You can edit collection of current item with &quot;move item&quot; button. The state of submission is maintained as 'withdrawal' even the collection is moved.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 5 : Importing items"></a></p>
+<h1>Chapter 5 : Importing items</h1>
+<p><a name="Importing items"></a></p>
+<h2>Importing items</h2>
+<p><strong>Imports information of metadata on several items written with excel file and saves as item.</strong>  </p>
+<ol>
+<li>
+<p>Clicking &quot;importing item&quot; menu on the left menu of the screen, it will move to item importing screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemimport1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Select the import excel file with &quot;find file&quot; button of imported file after inputting input field of item import. Click &quot;import task&quot; button to import.  
+</p>
+<blockquote>
+<p>Setting information for importing is same as item import of user manual.<br />
+The import content is displayed on the &quot;item import history&quot; list on the bottom of the screen after importing task.<br />
+imported item can be checked with &quot;View item&quot; button, and items failed importing because of error can be checked with &quot;view log&quot;button.  
+</p>
+<p><strong>[Directions to an imported excel file]</strong><br />
+The first row of excel file should include 'element name', and the sub-element should be input connecting after top element with '.'.<br />
+E.g.) Case of 'description' for top element, and 'abstract' for sub-element : description.abstract<br />
+Input metadata matched with the element name  from the second line of the excel file.  
+</p>
+</blockquote>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/itemimport2.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 6 : User Management"></a></p>
+<h1>Chapter 6 : User Management</h1>
+<p><a name="User Management"></a></p>
+<h2>User Management</h2>
+<p><strong>It provides function to 'search' and 'edit basic information' on registered users.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;User Management&quot; menu on the left screen to move to user management screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/useredit1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can search users with conditions as 'e-mail', 'name', 'department', 'request for submission authority' and etc.  
+</p>
+</li>
+<li>
+<p>You make new user registration using &quot;Add user&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/useredit2_eng.jpg" />  
+</p>
+<blockquote>
+<p>E-mail : An address for users to log-in or to receive an alarm.<br />
+Name : name of a user.<br />
+Department : Department of user. Affiliated department is managed at code management.<br />
+Phone number : phone number of a user.<br />
+Submission Authority Request Of Item : It will be selected if requested, when registering users as requesting item submission authority. Uncheck after assigning submission authority to users requested.<br />
+Allowing access : Selecting possibility of user log in. If unchecked, login of user is not allowed.<br />
+* Password of a user is applied to id part of user e-mail, when adding a user.<br />
+* E.g.) The password would be 'user1' for user1@gmail.com  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can edit and delete by users, clicking &quot;edit&quot; button on the right of user list.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/useredit3_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 7 : Group Management"></a></p>
+<h1>Chapter 7 : Group Management</h1>
+<p><a name="Group Management"></a></p>
+<h2>Group Management</h2>
+<p><strong>You can manage a group where user belongs to. All the users from the group receive all authorities, with giving certain authorities to groups.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;group management&quot; menu to move to group management screen from the left menu of the screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/group1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Create group, clicking &quot;add new group&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/group2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit groups by clicking &quot;edit&quot; button on the left side of goup.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/group3_eng.jpg" />  
+</p>
+<blockquote>
+<p>'Administrator' group is a group of administrator.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can delete group, clicking &quot;delete&quot; button from the right of group. The information on user will not be deleted even if you delete a group.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 8 : Statistics Management"></a></p>
+<h1>Chapter 8 : Statistics Management</h1>
+<p><a name="Statistics Management"></a></p>
+<h2>Statistics Management</h2>
+<p><strong>Status of item submission and user access can be checked with graph and figure.</strong>  </p>
+<ol>
+<li>
+<p>Move to statistics screen with clicking &quot;statistics management&quot; menu on the left of the screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/statistics1_eng.jpg" />  
+</p>
+<blockquote>
+<p>'Archive state by collection' tab checks status of item submission and the number of item submitted by collection.<br />
+'Archive state by period' tab checks the number of items built by period.<br />
+'User access state' tab checks the number of user accessed by period.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 9 : Code Management"></a></p>
+<h1>Chapter 9 : Code Management</h1>
+<p><a name="Code Management"></a></p>
+<h2>Code Management</h2>
+<p><strong>You can manage codes used for P-CUBE such as item submission, and user registration.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;code management&quot; menu on the left of the page to move to a code management screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/code1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can search by code group, and code name.  
+</p>
+</li>
+<li>
+<p>You can create new code, using &quot;add code&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/code2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Order : It shows order of alignment for code in groups.<br />
+Group : Code group can be selected.<br />
+Code : It is a unique value of a code used internally.<br />
+Code name : It is a name of code on screen.<br />
+Explanation : It is an explanation on code.<br />
+Property 1, property 2 : Inputting an additional property of code. Inputting image route into property 2 is necessary, especially when it is a case of subject classification.  
+</p>
+<p>Adding code group has to edit DBMS directly, so please contact to developer of the related institute to add.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can edit code with &quot;Change&quot; button on the right of the code.  
+</p>
+</li>
+<li>
+<p>You can delete code with &quot;delete&quot; button on the right of the code.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 10 : Notice Management"></a></p>
+<h1>Chapter 10 : Notice Management</h1>
+<p><a name="Notice Management"></a></p>
+<h2>Notice Management</h2>
+<p><strong>You can 'write' or 'edit' a notice announced on the main screen.</strong>  </p>
+<ol>
+<li>
+<p>Move to notice management screen, clicking &quot;Notice management&quot;on the right of the screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/news1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can write a new notice, using &quot;write&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/news2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Title : The title of notice.<br />
+Content : Detailed content of notice.<br />
+File : Attached file added to notice.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can check the notice written, clicking notice'.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/news3_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can edit the notice using &quot;notice edit&quot; button at the detailed screen of notice, and delete the notice with &quot;notice delete&quot; button.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 11 : Environment Settings"></a></p>
+<h1>Chapter 11 : Environment Settings</h1>
+<p><a name="Environment Settings"></a></p>
+<h2>Environment Settings</h2>
+<p><strong>You can edit the veriable on basic settings of website.</strong>  </p>
+<ol>
+<li>
+<p>Move to environment setting screen by clicking &quot;Environment Setting&quot; menu on the left screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/setup1_eng.jpg" />  
+</p>
+<blockquote>
+<p>Name of website : Title shown at the tab of web browser.<br />
+Institute Logo : Logo of institute or department placed at the upper right of the screen.<br />
+the bottom of the page<br />
+- Image File : File logo displayed on the bottom of the page.<br />
+- Content above : Information to be displayed in the first line among information on the bottom of the page. E.g.) Institution address<br />
+- Content below : Information to be displayed in the second line among information on the bottom of the page. E.g.) copyright<br />
+Repository Name : Use for 'Publisher' metadata when submitting an item.<br />
+Administrator Information<br />
+- Name : name of a user.<br />
+- E-mail : E-mail of a system administrator.<br />
+- Phone number : phone number of a system administrator.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 12 : System monitoring"></a></p>
+<h1>Chapter 12 : System monitoring</h1>
+<p><a name="System monitoring"></a></p>
+<h2>System monitoring</h2>
+<p><strong>It provides information on checking state information periodically such as CPU, Memory, and Storage of installed server where P-CUBE is installed.</strong>  </p>
+<ol>
+<li>
+<p>Move to system monitoring screen by clicking &quot;system monitoring&quot; menu on the left window.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/monitor1_eng.jpg" /></p>
+<blockquote>
+<p>It would not be used depending on the settings of cube.cfg. (It is described at developer manual as setting file of P-CUBE.)<br />
+You can search with search date by period. (Case of storage, search with month)<br />
+Put mouse cursor on graph, the related date and data will be displayed. Data by inspection period with clicking.<br />
+If it reaches risk figure with setting of cube.cfg, an alarm e-mail can be sent to e-mail of administrator.  
+</p>
+</blockquote>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

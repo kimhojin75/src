@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>User_Manual_2013.11.28,1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{margin:0;padding:0;}
+body {
+         font:13.34px helvetica,arial,freesans,clean,sans-serif;
+         color:black;
+         line-height:1.4em;
+         background-color: #F8F8F8;
+         padding: 0.7em;
+}
+p {
+         margin:1em 0;
+         line-height:1.5em;
+}
+table {
+         font-size:inherit;
+         font:100%;
+         margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono",monospace;}
+pre {
+         margin:1em 0;
+         font-size:12px;
+         background-color:#eee;
+         border:1px solid #ddd;
+         padding:5px;
+         line-height:1.5em;
+         color:#444;
+         overflow:auto;
+         -webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+         padding:0;
+         font-size:12px;
+         background-color:#eee;
+         border:none;
+}
+code {
+         font-size:12px;
+         background-color:#f8f8ff;
+         color:#444;
+         padding:0 .2em;
+         border:1px solid #dedede;
+}
+img{border:1px solid gray;;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:4em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:2em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+h4{font-size:130%;padding-top:1.5em;text-align:center;}
+h5{font-size:150%;padding-top:.5em;padding-left:20px;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+   font-size: 0.83em;
+   vertical-align: super;
+   line-height: 0;
+}
+* {
+         -webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+   body {
+      width: 854px;
+      margin:0 auto;
+   }
+}
+@media print {
+         table, pre {
+                  page-break-inside: avoid;
+         }
+         pre {
+                  word-wrap: break-word;
+         }
+}
+
+#toc {
+	list-style: none;
+	margin-bottom: 20px;
+}
+#toc li {
+	background: url(dot.gif) repeat-x bottom left;
+	overflow: hidden;
+	padding-bottom: 2px;
+	font-size:100%;
+}
+#toc a,
+#toc span {
+	display: inline-block;
+	background: #fff;
+	position: relative;
+	bottom: -4px;
+	color:black;
+}
+#toc a {
+	float: left;
+}
+#toc span {
+	float: left;
+	padding: 0 2px 3px 0;
+}
+
+
+
+
+/* Main style for the table */
+
+.dp-highlighter
+{
+	font-family: "Courier New" , Courier, mono;
+	font-size: 12px;
+	border: 1px solid #4e4747;
+	background-color: #fff;
+	width: 99%;
+	overflow: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.dp-highlighter .bar
+{
+	padding-left: 45px;
+}
+
+.dp-highlighter.collapsed .bar, .dp-highlighter.nogutter .bar
+{
+	padding-left: 0px;
+}
+
+.dp-highlighter ol
+{
+	margin: 0px 0px 1px 5px; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+	padding: 0px;
+	color: #4e4747;
+}
+
+.dp-highlighter.nogutter ol
+{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.dp-highlighter ol li, .dp-highlighter .columns div
+{
+	border-left: 0px;
+	background-color: #fff;
+	padding-left: 10px;
+	line-height: 14px;
+}
+
+.dp-highlighter.nogutter ol li, .dp-highlighter.nogutter .columns div
+{
+	border: 0;
+}
+
+.dp-highlighter .columns
+{
+	color: gray;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dp-highlighter .columns div
+{
+	padding-bottom: 5px;
+}
+
+.dp-highlighter ol li.alt
+{
+	background-color: #f8f8f8;
+}
+
+.dp-highlighter ol li span
+{
+	color: Black;
+}
+
+/* Adjust some properties when collapsed */
+
+.dp-highlighter.collapsed ol
+{
+	margin: 0px;
+}
+
+.dp-highlighter.collapsed ol li
+{
+	display: none;
+}
+
+/* Additional modifications when in print-view */
+
+.dp-highlighter.printing
+{
+	border: none;
+}
+
+.dp-highlighter.printing .tools
+{
+	display: none !important;
+}
+
+.dp-highlighter.printing li
+{
+	display: list-item !important;
+}
+
+/* Styles for the tools */
+
+.dp-highlighter .tools
+{
+	padding: 3px 8px 3px 10px;
+	border-bottom: 1px solid #2B91AF;
+	font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: silver;
+}
+
+.dp-highlighter.collapsed .tools
+{
+	border-bottom: 0;
+}
+
+.dp-highlighter .tools a
+{
+	font-size: 9px;
+	color: gray;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.dp-highlighter .tools a:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* About dialog styles */
+
+.dp-about { background-color: #fff; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; width: 60px; height: 22px; }
+
+/* Language specific styles */
+
+.dp-xml {}
+.dp-xml .cdata { color: #ff1493; }
+.dp-xml .comments { color: green; }
+.dp-xml .tag { font-weight: bold; color: blue; }
+.dp-xml .tag-name { color: black; font-weight: bold; }
+.dp-xml .attribute { color: red; }
+.dp-xml .attribute-value { color: blue; }
+
+</style>
+</head>
+<body>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/User_Manual.jpg" />
+<br></p>
+<h4>- 목 차 -</h4>
+<ul id="toc">
+<li><span><a href="#Chapter 1 : 이용자 등록 및 프로필 관리">Chapter 1 : 이용자 등록 및 프로필 관리</a></span></li>
+<li><span><a href="#이용자 등록">&nbsp;&nbsp; - 이용자 등록</a></span></li>
+<li><span><a href="#로그인">&nbsp;&nbsp; - 로그인</a></span></li>
+<li><span><a href="#패스워드 찾기">&nbsp;&nbsp; - 패스워드 찾기</a></span></li>
+<li><span><a href="#프로필 관리">&nbsp;&nbsp; - 프로필 관리</a></span></li>
+<li><span><a href="#Chapter 2 : 통합검색 및 상세검색">Chapter 2 : 통합검색 및 상세검색</a></span></li>
+<li><span><a href="#통합검색">&nbsp;&nbsp; - 통합검색</a></span></li>
+<li><span><a href="#상세검색">&nbsp;&nbsp; - 상세검색</a></span></li>
+<li><span><a href="#Chapter 3 : 브라우즈">Chapter 3 : 브라우즈</a></span></li>
+<li><span><a href="#조직 & 컬렉션 브라우즈">&nbsp;&nbsp; - 조직 & 컬렉션 브라우즈</a></span></li>
+<li><span><a href="#승인일 브라우즈">&nbsp;&nbsp; - 승인일 브라우즈</a></span></li>
+<li><span><a href="#저자명 브라우즈">&nbsp;&nbsp; - 저자명 브라우즈</a></span></li>
+<li><span><a href="#제목 브라우즈">&nbsp;&nbsp; - 제목 브라우즈</a></span></li>
+<li><span><a href="#주제분류별 브라우즈">&nbsp;&nbsp; - 주제분류별 브라우즈</a></span></li>
+<li><span><a href="#Chapter 4 : MY CUBE">Chapter 4 : MY CUBE</a></span></li>
+<li><span><a href="#아이템 제출 목록">&nbsp;&nbsp; - 아이템 제출 목록</a></span></li>
+<li><span><a href="#아이템 승인 목록">&nbsp;&nbsp; - 아이템 승인 목록</a></span></li>
+<li><span><a href="#아이템 신규 제출">&nbsp;&nbsp; - 아이템 신규 제출</a></span></li>
+<li><span><a href="#검증 대상 아이템">&nbsp;&nbsp; - 검증 대상 아이템</a></span></li>
+<li><span><a href="#Chapter 5 : P-DRIVE">Chapter 5 : P-DRIVE</a></span></li>
+<li><span><a href="#P-DRIVE란?">&nbsp;&nbsp; - P-DRIVE란?</a></span></li>
+</ul>
+<p><br><br></p>
+<p><a name="Chapter 1 : 이용자 등록 및 프로필 관리"></a></p>
+<h1>Chapter 1 : 이용자 등록 및 프로필 관리</h1>
+<p><a name="이용자 등록"></a></p>
+<h2>이용자 등록</h2>
+<p><strong>P-CUBE 에 아이템을 제출하기 위해서는 미리 이용자 등록이 되어있어야 합니다.</strong>  </p>
+<ol>
+<li>
+<p>P-CUBE 메인 화면 상단 &quot;Registration&quot; 을 클릭하면 &quot;이용자 등록&quot; 화면으로 이동합니다.  
+</p>
+</li>
+<li>
+<p>이메일 주소를 입력한 후 &quot;등록&quot; 버튼을 클릭하면, 입력한 이메일 주소로 &quot;P-CUBE : 가입 알림&quot; 메일이 발송됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join1.jpg" />  
+</p>
+<blockquote>
+<p>입력한 이메일 주소는 P-CUBE의 이용자 ID 그리고 메일주소로 사용되므로 정확한 주소를 입력해야 합니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;P-CUBE : 가입 알림&quot; 메일에 포함되어 있는 URL을 클릭하면, &quot;회원 가입&quot; 화면으로 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join2.jpg" />  
+</p>
+</li>
+<li>
+<p>이용자 정보를 입력한 후 &quot;입력내용 저장&quot; 버튼을 클릭하면 이용자 등록이 완료됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join3.jpg" />  
+</p>
+<blockquote>
+<p>성명, 부서, 패스워드, 패스워드 확인은 필수입력 항목입니다.</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="로그인"></a></p>
+<h2>로그인</h2>
+<p><strong>일반적인 웹사이트의 로그인과 유사하게 등록시 입력한 이메일과 패스워드를 입력하여 로그인 할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>P-CUBE 메인화면 좌측상단 Login 입력 폼에 이메일, 패스워드를 입력해 주십시오.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join4.jpg" />  
+</p>
+<blockquote>
+<p>패스워드 분실 시 &quot;Forgot your password&quot; 링크를 클릭하여 주십시오.<br />
+신규 등록시 입력한 이메일을 분실했을 경우에는 관리자에게 직접 문의해야 합니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="패스워드 찾기"></a></p>
+<h2>패스워드 찾기</h2>
+<p><strong>패스워드를 분실했을 경우 등록 메일로 패스워드 수정 페이지 URL을 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>&quot;Forgot your password&quot; 링크를 클릭하면 아래 그림과 같이 &quot;패스워드 찾기&quot; 화면이 표시됩니다.  
+</p>
+</li>
+<li>
+<p>이용자 등록시 입력한 이메일 주소를 입력하여 주십시오.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/password1.jpg" />  
+</p>
+</li>
+<li>
+<p>입력한 이메일 주소로 메일이 발송되며, 발송된 메일에는 패스워드를 설정할 수 있는 URL을 포함하고 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/password2.jpg" />  
+</p>
+</li>
+<li>
+<p>포함된 URL을 클릭하면 아래의 화면이 표시됩니다. 새 패스워드를 입력해 주십시오.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/password3.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="프로필 관리"></a></p>
+<h2>프로필 관리</h2>
+<p><strong>이용자의 기본정보 수정기능을 제공하며, 소속 그룹과 이용자가 가진 권한을 확인할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>P-CUBE 메인화면에서 로그인 영역의 &quot;프로필 관리&quot;를 클릭하여 주십시오.  
+</p>
+</li>
+<li>
+<p>이용자의 기본정보, 패스워드의 수정 및 소속 그룹, 권한에 대한 정보를 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/profile1.jpg" />  
+</p>
+<blockquote>
+<p>소속 그룹 : Anonymous그룹이외의 그룹은 관리자에 의해 소속되어진 그룹입니다.<br />
+권한 목록 : 관리자에 의해 부여받으며, 부여 받을 수 있는 권한으로는 '아이템 제출'/'아이템 검증'/'아이템 접근'으로 구성되어 있습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 2 : 통합검색 및 상세검색"></a></p>
+<h1>Chapter 2 : 통합검색 및 상세검색</h1>
+<p><a name="통합검색"></a></p>
+<h2>통합검색</h2>
+<p><strong>통합 검색은 입력한 키워드를 기반으로 아이템의 제목, 저자, 주제 등에 대해 검색을 수행하여 결과를 제공합니다.</strong>  </p>
+<ol>
+<li>
+<p>P-CUBE의 통합검색 이용을 하려면 화면 상단에 위치한 검색 창을 이용하시면 됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/search1.jpg" />  
+</p>
+</li>
+<li>
+<p>특정 조직이나 컬렉션 등으로 제한한 검색이 필요할 경우 상세검색 링크를 클릭하시면 됩니다.  
+</p>
+<blockquote>
+<p><strong>P-CUBE는 Jakarta Lucene을 검색엔진으로 사용하며, 아래의 검색기능을 포함합니다.</strong><br />
+1. 검색 키워드에 입력한 내용은 아이템의 제목, 저자, 주제 등에 대해 검색을 수행합니다.<br />
+2. 검색 키워드 중 아래와 같은 단어는 무시됩니다.<br />
+ex) &quot;a&quot;, &quot;and&quot;, &quot;are&quot; , &quot;as&quot; , &quot;at&quot; , &quot;be&quot; , &quot;but&quot; , &quot;by&quot; , &quot;for&quot; , &quot;if&quot; , &quot;in&quot; , &quot;into&quot;, &quot;is&quot; ,&quot;it&quot; ,&quot;no&quot; , &quot;not&quot; , &quot;of&quot; , &quot;on&quot; , &quot;or&quot; , &quot;such&quot;, &quot;the&quot; , &quot;to&quot; , &quot;was&quot;<br />
+3. 키워드 뒤에 (*) 특수기호가 붙은 경우 키워드를 포함하는 모든 단어를 검색합니다.<br />
+ex) select* 검색결과 : selects, selector, selectman, selecting<br />
+4. (&quot;)로 키워드를 감싸면 복수의 키워드에 대해 검색합니다.<br />
+ex) &quot;organization change&quot;<br />
+5. (+) 특수기호를 키워드 앞에 붙인 경우, 이 키워드를 가진 아이템은 반드시 결과에 
+됩니다.<br />
+ex) +dog training<br />
+6. (-) 특수기호를 키워드 앞에 붙인 경우, 이 키워드를 가진 아이템은 검색결과에서 제외 됩니다.<br />
+ex) dog -training<br />
+7. 복수 키워드 검색 시 키워드 사이에 AND를 입력할 경우 두 키워드를 모두 가진 아이템을 검색결과에 표시합니다.<br />
+ex) dog AND training<br />
+8. 복수 키워드 검색 시 키워드 사이에 OR를 입력할 경우 두 키워드 중 하나를 가진 아이템을 검색결과에 표시합니다.<br />
+ex) dog OR training  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="상세검색"></a></p>
+<h2>상세검색</h2>
+<p><strong>기본적으로 P-CUBE는 전체 아이템을 대상으로 검색하며, 상세검색에서는 특정 조직으로 검색조건을 제한하여 검색을 할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>특정 조직으로 검색범위를 제한하여 검색할 수 있으며, 제목/저자/주제/지도좌표범위 등 특정 검색항목으로 검색할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/search2.jpg" />  
+</p>
+<blockquote>
+<p>통합검색과 마찬가지로, 키워드를 불리언 연산자를 이용하여 키워드를 조합할 수 있습니다.<br />
+첫번째 키워드 입력란이 공백일 경우 검색이 수행되지 않습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 3 : 브라우즈"></a></p>
+<h1>Chapter 3 : 브라우즈</h1>
+<p><a name="조직 &amp; 컬렉션 브라우즈"></a></p>
+<h2>조직 &amp; 컬렉션 브라우즈</h2>
+<p><strong>조직이나 컬렉션별로 아이템을 조회할 수 있습니다.</strong>      </p>
+<ol>
+<li>
+<p>화면 좌측의 메뉴에서 &quot;BROWSE &gt; 조직 &amp; 컬렉션&quot; 메뉴를 클릭하여 컬렉션 리스트를 조회할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse1.jpg" />  
+</p>
+</li>
+<li>
+<p>특정 조직이나 컬렉션을 클릭하면 하위조직이나 컬렉션과 함께 제출된 아이템 목록이 표시됩니다.  
+</p>
+</li>
+<li>
+<p>조직 &amp; 컬렉션 상세화면은 아이템 조회를 위한 여러가지 기능을 제공합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse2.jpg" />  
+</p>
+<blockquote>
+<p>1) 검색 및 브라우즈로 해당 조직의 컬렉션에 제출된 아이템 목록을 확인할 수 있습니다.<br />
+2) 하위 조직 &amp; 컬렉션 단위로 아이템을 브라우즈 할 수 있습니다.<br />
+3) &quot;더보기&quot; 버튼을 통해 기본적으로 제공되는 8건 이외의 데이터를 확인할 수 있습니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>모든 아이템 브라우즈의 아이템 상세화면에서 &quot;인쇄&quot; 버튼으로 현재 아이템 정보를 인쇄할 수 있으며, &quot;반출하기&quot; 버튼으로 현재 아이템의 기본 정보를 텍스트 또는 엑셀파일로 저장 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse2_2.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 상세화면에서 아이템 제목과 연관된 NDSL논문이 존재한다면, 아이템 상세화면의 아랫부분에 &quot;관련 NDSL 논문&quot;이 표시됩니다.  
+</p>
+</li>
+<li>
+<p>NDSL논문 제목을 클릭하면 NDSL논문 정보페이지가 표시됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse2_3.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="승인일 브라우즈"></a></p>
+<h2>승인일 브라우즈</h2>
+<p><strong>승인일(검증이 완료된 시점)을 기준으로 아이템을 조회할 수 있습니다.</strong>  </p>
+<p><em>이용자에 의해 아이템이 제출된 후 검증자로 부터 아이템에 대한 메타데이터, 첨부파일등에 대한 검증이 완료된 시점을 승인일이라고 정의합니다.</em>  </p>
+<ol>
+<li>
+<p>년/월 별로 아이템을 조회할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>검색 결과에 대해 승인일, 제출일, 제목 조회 및 정렬을 수행할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>목록에서 특정 아이템을 클릭하면 아이템 상세화면으로 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse3.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="저자명 브라우즈"></a></p>
+<h2>저자명 브라우즈</h2>
+<p><strong>저자별 아이템 제출 현황을 확인하기 위하여 아이템의 저자명을 기준으로 조회할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>저자명 첫 글자나, 입력한 키워드로 저자명을 조회할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>저자명 검색 결과에 대해 정렬 기능을 수행할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse4.jpg" />  
+</p>
+</li>
+<li>
+<p>목록에서 특정 저자를 클릭하면 해당 저자의 아이템 목록을 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse5.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="제목 브라우즈"></a></p>
+<h2>제목 브라우즈</h2>
+<p><strong>아이템 제목순으로 아이템을 조회할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>아이템 제목의 첫 글자나 키워드로 아이템을 조회 할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>검색 결과에 대해 제목/최종승인일/제출일 등을 기준으로 정렬할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>목록에서 특정 아이템을 클릭하면 아이템 상세화면으로 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse6.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="주제분류별 브라우즈"></a></p>
+<h2>주제분류별 브라우즈</h2>
+<p><strong>주제분류 별로 아이템을 조회할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>주제분류 목록에서 특정 주제를 클릭하면 해당 주제로 제출된 아이템 목록이 표시됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse7.jpg" />  
+</p>
+</li>
+<li>
+<p>검색 결과에 대해 제목/최종승인일/제출일 등을 기준으로 정렬할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse8.jpg" />  
+</p>
+<blockquote>
+<p>주제분류는 관리자가 설정한 주제분류입니다. 이에 대한 문의는 관리자에게 하실 수 있습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 4 : MY CUBE"></a></p>
+<h1>Chapter 4 : MY CUBE</h1>
+<p><a name="아이템 제출 목록"></a></p>
+<h2>아이템 제출 목록</h2>
+<p><strong>제출 중인 아이템과 제출 후 승인대기 중인 아이템에 대한 조회를 할 수 있습니다.</strong>  </p>
+<p><strong>제출을 완료하지 않은 아이템은 이어서 제출작업을 하거나 삭제할 수 있으며, 제출 후 승인대기 아이템에 대하여 제출취소를 하는 등 추가적인 작업이 가능합니다.</strong>  </p>
+<ol>
+<li>
+<p>이용자의 &quot;제출 중 아이템&quot;, &quot;제출 후 승인대기 아이템&quot; 목록을 확인할 수 있습니다.  
+</p>
+</li>
+<li>
+<p>&quot;새 아이템 제출&quot; 버튼을 클릭하면 &quot;아이템 신규 제출&quot; 화면으로 이동합니다.  
+</p>
+</li>
+<li>
+<p>&quot;제출 중 아이템&quot; 목록에서 &quot;삭제&quot; 버튼을 통해 제출중인 아이템을 삭제할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item1.jpg" />  
+</p>
+<blockquote>
+<p>&quot;제출 중 아이템&quot; 은 '아이템 제출 중' 상태의 아이템 목록을 확인할 수 있습니다.<br />
+&quot;제출 후 승인대기 아이템&quot; 은 제출완료 후, 제출된 컬렉션의 검증자 승인을 기다리는 아이템입니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;제출 중 아이템&quot; 목록에서 &quot;보기&quot; 버튼을 클릭하면 해당 아이템을 삭제하거나, 제출작업을 이어서 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item2.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;제출 후 승인대기 아이템&quot; 목록에서 &quot;제출취소&quot; 버튼을 클릭하면 제출 완료 상태의 아이템이 제출중으로 변경 되며, 제출중 아이템 목록으로 해당 아이템이 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item3.jpg" />  
+</p>
+<blockquote>
+<p><strong>아이템을 검증자가 검증작업을 하는중이면 &quot;제출취소&quot; 버튼이 비활성화 됩니다.</strong>  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="아이템 승인 목록"></a></p>
+<h2>아이템 승인 목록</h2>
+<p><strong>승인이 완료된 아이템 목록을 조회할 수 있으며, 이 아이템은 검색 &amp; 브라우즈 기능으로 다른 이용자에게 공개됩니다.</strong>  </p>
+<ol>
+<li>
+<p>좌측 메뉴에서 &quot;아이템 승인목록&quot;을 클릭하면 아래와 같이 제출한 아이템 목록을 확인할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item4.jpg" />  
+</p>
+</li>
+<li>
+<p>목록에서 특정 아이템을 클릭하면 아이템 상세화면으로 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item5.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템의 &quot;이력보기&quot; 버튼을 클릭하면 아이템의 제출 및 검증에 대한 상세한 이력이 보여집니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item4_1.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="아이템 신규 제출"></a></p>
+<h2>아이템 신규 제출</h2>
+<p><strong>아이템의 신규 제출은 기본정보설정, 메타데이터입력, 첨부파일제출등 여러 단계의 입력작업을 거쳐 완료됩니다.</strong>  </p>
+<ol>
+<li>
+<p>컬렉션을 선택한 후 &quot;다음 단계 &gt;&quot;버튼을 클릭하면 “기본설정”화면으로 이동됩니다.<br />
+   제출 할 아이템과 유사한 아이템을 이미 제출한 적이 있는 경우, 제출한 아이템의 메타데이터를 재활용하여 간편하게 아이템을 제출하실 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item6.jpg" />  
+</p>
+<blockquote>
+<p><strong>기존 제출 아이템의 활용방법</strong><br />
+1) &quot;아이템 제출 템플릿 선택&quot;을 &quot;예&quot;로 선택하여 현재 컬렉션의 기존 제출 아이템목록을 조회합니다.<br />
+2) 사용할 아이템을 선택하고 &quot;다음단계&quot; 버튼을 클릭하면 해당 아이템의 메타데이터가 새 제출 아이템에 적용됩니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;기본설정&quot;화면에서는 아이템의 주제, 공개, 수집, DOI, 과학기술표준분류 설정을 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item7.jpg" />  
+</p>
+<blockquote>
+<p>주제분류는 이용자의 선호주제분류가 기본으로 선택되며, 여러개의 주제분류를 선택할 수 있습니다.<br />
+공개여부를 &quot;기간설정&quot; 으로 날짜를 선택하면 선택한 날짜 이후 다른 이용자에게 공개됩니다.<br />
+메타데이터 수집을 허용하게 되면 외부 서비스에서 통합검색이 가능하며, 수집시 데이터 원본(첨부파일)은 제외됩니다.<br />
+&quot;DOI&quot;(Digital Object Identify)는 아이템의 글로벌 식별자로서, &quot;DOI부여&quot; 를 선택하면 &quot;datacite.org&quot; 에 메타데이터 출판시 사용됩니다.<br />
+과학기술표준분류는 &quot;P-CUBE센터&quot; 수집시 적용되는 분류입니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;메타데이터&quot;화면에서는 아이템의 메타데이터를 입력할 수 있습니다.<br />
+&quot;필수보기&quot; 를 선택하여 메타데이터의 필수항목에 대해 손쉽게 입력할 수 있으며, 메타데이터의 +, - 버튼으로 반복 가능한 메타데이터 항목을 추가 및 삭제할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item8.jpg" />  
+</p>
+<blockquote>
+<p>제출 작업을 멈추고 다음에 이어서 하고 싶은 경우, 각 아이템 제출 단계 좌측 하단에 있는 &quot;임시 저장&quot; 버튼을 눌러 주십시오.<br />
+제출 중단된 아이템은 좌측 메뉴의 &quot;MY CUBE &gt; 아이템 제출 목록&quot; 화면의 &quot;아이템 제출목록&quot; 에서 확인할 수 있습니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;파일업로드&quot;의 첫번째 화면에서는 아이템에 관련한 첨부파일을 선택하여 업로드 할 수 있습니다. 만약 첨부할 파일이 없다면 &quot;다음단계&gt;&quot; 버튼을 클릭하여 이 단계를 생략할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item9.jpg" />  
+</p>
+<blockquote>
+<p>윈도우 탐색기에서 여러파일이나 폴더를 드래그하여 한번에 여러파일을 등록할 수 있습니다.<br />
+(IE10, Chrome, Firefox 등 HTML5를 지원하는 브라우저에서만 동작됩니다.)<br />
+첨부파일이 있을경우 &quot;다음단계 &gt;&quot;버튼을 클릭하면 업로드된 파일을 확인하는 화면으로 이동합니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;파일업로드&quot;의 두번째 화면에서는 첨부파일의 형식, 설명에 대한 수정을 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item9_1.jpg" />  
+</p>
+<blockquote>
+<p>&quot;삭제&quot; 버튼을 클릭하여 해당 파일을 삭제 할 수 있습니다.<br />
+파일형식은 시스템에서 자동인식합니다. 잘못되거나 수정을 원할 경우 파일형식을 수정합니다.<br />
+파일설명을 등록할 수 있으며, 입력된 설명을 수정할 수 있습니다. 파일설명은 색인되어 키워드 검색에 활용이 됩니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>&quot;제출정보확인&quot;화면에서는 앞 단계에서 입력한 기본설정 정보, 메타데이터, 첨부파일에 대한 정보를 확인할 수 있습니다.<br />
+아이템 정보에 이상이 없을 경우, &quot;다음 단계 &gt;&quot;버튼을 눌러 제출을 완료하여 주십시오.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item10.jpg" />  
+</p>
+<blockquote>
+<p>각 단계별 버튼을 클릭하면 해당 단계로 이동하여 입력작업을 할 수 있습니다.</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="검증 대상 아이템"></a></p>
+<h2>검증 대상 아이템</h2>
+<p><strong>관리자가 컬렉션별로 지정한 '검증자'/'대표검증자'인 경우에만 사용할 수 있는 기능입니다.</strong>  </p>
+<p><strong>'검증자'의 경우 검증 의견을 작성하며, '대표검증자'의 경우 '검증자'의 검증 의견을 참고하여 '아이템 승인/거절' 등의 작업을 수행할 수 있습니다.</strong>  </p>
+<ol>
+<li>
+<p>좌측 메뉴에서 &quot;검증대상 아이템&quot; 을 클릭하면 아래와 같은 화면이 표시됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item11.jpg" />  
+</p>
+<blockquote>
+<p>검증대기 아이템의 &quot;의견작성&quot; 버튼은 검증자에게만 표시됩니다.<br />
+검증대기 아이템의 &quot;가져오기&quot; 버튼은 대표검증자에게만 표시됩니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>검증대기 아이템 목록에서 &quot;의견작성&quot; 버튼을 클릭하면 해당 아이템에 대한 검증의견을 작성하는 화면으로 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item12.jpg" />  
+</p>
+</li>
+<li>
+<p>작성된 아이템에 대한 의견은 아래와 같이 확인 할 수 있습니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item13.jpg" />  
+</p>
+<blockquote>
+<p>검증의견을 작성하면 &quot;검증대기 아이템&quot;의 해당 아이템명에 작성된 수가 표시됩니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>검증대기 아이템 목록에서 &quot;가져오기&quot; 버튼을 클릭하면 해당 아이템의 &quot;검증작업 수행&quot; 화면으로 이동됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item14.jpg" />  
+</p>
+<blockquote>
+<p>검증작업 : 검증의 승인과 거절여부를 선택합니다.<br />
+- &quot;승인&quot; 버튼을 클릭하여 해당 아이템의 검증을 승인합니다.<br />
+- &quot;거절&quot; 버튼을 클릭하여 해당 아이템의 승인을 거절하여 제출상태로 돌립니다.<br />
+기타작업 : 검증을 바로 하지 않고 다음에 하려는 경우 사용합니다.<br />
+- &quot;나중에 수행&quot; 버튼을 클릭하여 해당 아이템의 상태를 검증중인 상태로 둡니다.<br />
+- &quot;검증 보류&quot; 버튼을 클릭하여 해당 아이템의 상태를 검증대기인 상태로 둡니다.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>승인을 하면 해당 아이템은 검증이 완료되며, 검색 브라우즈 기능을 통해 확인할 수 있습니다.  
+</p>
+<blockquote>
+<p>공개여부를 '비공개'로 하였거나, '공개기간설정일'이 아직 안된 아이템의 경우 다른 이용자에게 공개되지 않습니다.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 5 : P-DRIVE"></a></p>
+<h1>Chapter 5 : P-DRIVE</h1>
+<p><a name="P-DRIVE란?"></a></p>
+<h2>P-DRIVE란?</h2>
+<p><strong>P-DRIVE는 이용자에게 파일저장 및 관리를 할 수 있는 개인별 저장공간을 지원합니다.</strong><br />
+<strong>첨부파일 제출시 직접 업로드하기 어려운 대용량 파일은 P-DRIVE에 미리 업로드하여 사용하면 편리합니다.</strong>  </p>
+<ol>
+<li>
+<p>좌측 메뉴에서 &quot;P-DRIVE&quot;을 클릭하면 아래와 같은 화면이 표시되며, 다운로드에 시간이 오래걸리는 외부의 파일을 등록하면 P-CUBE가 다운로드를 수행하여 P-DRIVE에 저장합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/pdrive1.jpg" />  
+</p>
+</li>
+<li>
+<p>&quot;외부링크등록&quot; 버튼을 클릭하면 &quot;외부링크파일등록&quot; 팝업이 표시되며, 다운로드 할 파일의 HTTP / FTP 링크 주소를 입력 후 &quot;파일등록&quot;버튼을 클릭하면 해당 위치의 파일이 P-DRIVE에 등록됩니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/pdrive2.jpg" />  
+</p>
+</li>
+<li>
+<p>아이템 제출중 파일업로드 화면에서 &quot;P-DRIVE&quot; 버튼을 클릭하여 이용자의 &quot;P-DRIVE&quot; 에 저장된 파일을 아이템 첨부 파일로 사용합니다.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/pdrive3.jpg" />  
+</p>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

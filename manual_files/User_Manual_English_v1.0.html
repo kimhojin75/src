@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>User_Manual_eng_2013.11.28,1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{margin:0;padding:0;}
+body {
+         font:13.34px helvetica,arial,freesans,clean,sans-serif;
+         color:black;
+         line-height:1.4em;
+         background-color: #F8F8F8;
+         padding: 0.7em;
+}
+p {
+         margin:1em 0;
+         line-height:1.5em;
+}
+table {
+         font-size:inherit;
+         font:100%;
+         margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono",monospace;}
+pre {
+         margin:1em 0;
+         font-size:12px;
+         background-color:#eee;
+         border:1px solid #ddd;
+         padding:5px;
+         line-height:1.5em;
+         color:#444;
+         overflow:auto;
+         -webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+         padding:0;
+         font-size:12px;
+         background-color:#eee;
+         border:none;
+}
+code {
+         font-size:12px;
+         background-color:#f8f8ff;
+         color:#444;
+         padding:0 .2em;
+         border:1px solid #dedede;
+}
+img{border:1px solid gray;;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:4em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:2em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+h4{font-size:130%;padding-top:1.5em;text-align:center;}
+h5{font-size:150%;padding-top:.5em;padding-left:20px;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+   font-size: 0.83em;
+   vertical-align: super;
+   line-height: 0;
+}
+* {
+         -webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+   body {
+      width: 854px;
+      margin:0 auto;
+   }
+}
+@media print {
+         table, pre {
+                  page-break-inside: avoid;
+         }
+         pre {
+                  word-wrap: break-word;
+         }
+}
+
+#toc {
+	list-style: none;
+	margin-bottom: 20px;
+}
+#toc li {
+	background: url(dot.gif) repeat-x bottom left;
+	overflow: hidden;
+	padding-bottom: 2px;
+	font-size:100%;
+}
+#toc a,
+#toc span {
+	display: inline-block;
+	background: #fff;
+	position: relative;
+	bottom: -4px;
+	color:black;
+}
+#toc a {
+	float: left;
+}
+#toc span {
+	float: left;
+	padding: 0 2px 3px 0;
+}
+
+
+
+
+/* Main style for the table */
+
+.dp-highlighter
+{
+	font-family: "Courier New" , Courier, mono;
+	font-size: 12px;
+	border: 1px solid #4e4747;
+	background-color: #fff;
+	width: 99%;
+	overflow: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.dp-highlighter .bar
+{
+	padding-left: 45px;
+}
+
+.dp-highlighter.collapsed .bar, .dp-highlighter.nogutter .bar
+{
+	padding-left: 0px;
+}
+
+.dp-highlighter ol
+{
+	margin: 0px 0px 1px 5px; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+	padding: 0px;
+	color: #4e4747;
+}
+
+.dp-highlighter.nogutter ol
+{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.dp-highlighter ol li, .dp-highlighter .columns div
+{
+	border-left: 0px;
+	background-color: #fff;
+	padding-left: 10px;
+	line-height: 14px;
+}
+
+.dp-highlighter.nogutter ol li, .dp-highlighter.nogutter .columns div
+{
+	border: 0;
+}
+
+.dp-highlighter .columns
+{
+	color: gray;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dp-highlighter .columns div
+{
+	padding-bottom: 5px;
+}
+
+.dp-highlighter ol li.alt
+{
+	background-color: #f8f8f8;
+}
+
+.dp-highlighter ol li span
+{
+	color: Black;
+}
+
+/* Adjust some properties when collapsed */
+
+.dp-highlighter.collapsed ol
+{
+	margin: 0px;
+}
+
+.dp-highlighter.collapsed ol li
+{
+	display: none;
+}
+
+/* Additional modifications when in print-view */
+
+.dp-highlighter.printing
+{
+	border: none;
+}
+
+.dp-highlighter.printing .tools
+{
+	display: none !important;
+}
+
+.dp-highlighter.printing li
+{
+	display: list-item !important;
+}
+
+/* Styles for the tools */
+
+.dp-highlighter .tools
+{
+	padding: 3px 8px 3px 10px;
+	border-bottom: 1px solid #2B91AF;
+	font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: silver;
+}
+
+.dp-highlighter.collapsed .tools
+{
+	border-bottom: 0;
+}
+
+.dp-highlighter .tools a
+{
+	font-size: 9px;
+	color: gray;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.dp-highlighter .tools a:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* About dialog styles */
+
+.dp-about { background-color: #fff; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; width: 60px; height: 22px; }
+
+/* Language specific styles */
+
+.dp-xml {}
+.dp-xml .cdata { color: #ff1493; }
+.dp-xml .comments { color: green; }
+.dp-xml .tag { font-weight: bold; color: blue; }
+.dp-xml .tag-name { color: black; font-weight: bold; }
+.dp-xml .attribute { color: red; }
+.dp-xml .attribute-value { color: blue; }
+
+</style>
+</head>
+<body>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/User_Manual.jpg" />
+<br></p>
+<h4>- Table of contents -</h4>
+<ul id="toc">
+<li><span><a href="#Chapter 1 : user registration and profile management">Chapter 1 : user registration and profile management</a></span></li>
+<li><span><a href="#User registration">&nbsp;&nbsp; - User registration</a></span></li>
+<li><span><a href="#Log-in">&nbsp;&nbsp; - Log-in</a></span></li>
+<li><span><a href="#Find a password">&nbsp;&nbsp; - Find a password</a></span></li>
+<li><span><a href="#Profile management">&nbsp;&nbsp; - Profile management</a></span></li>
+<li><span><a href="#Chapter 2 : Integrated search and detailed search">Chapter 2 : Integrated search and detailed search</a></span></li>
+<li><span><a href="#Integrated Search">&nbsp;&nbsp; - Integrated Search</a></span></li>
+<li><span><a href="#Detailed Search">&nbsp;&nbsp; - Detailed Search</a></span></li>
+<li><span><a href="#Chapter 3 : A browse">Chapter 3 : A browse</a></span></li>
+<li><span><a href="#Organization and Collection browse">&nbsp;&nbsp; - Organization and Collection browse</a></span></li>
+<li><span><a href="#Approval date browse">&nbsp;&nbsp; - Approval date browse</a></span></li>
+<li><span><a href="#Author browse">&nbsp;&nbsp; - Author browse</a></span></li>
+<li><span><a href="#Title browse">&nbsp;&nbsp; - Title browse</a></span></li>
+<li><span><a href="#Browse by subject classification">&nbsp;&nbsp; - Browse by subject classification</a></span></li>
+<li><span><a href="#Chapter 4 : MY CUBE">Chapter 4 : MY CUBE</a></span></li>
+<li><span><a href="#Item Submission List">&nbsp;&nbsp; - Item Submission List</a></span></li>
+<li><span><a href="#Item Approval List">&nbsp;&nbsp; - Item Approval List</a></span></li>
+<li><span><a href="#New submission of an item">&nbsp;&nbsp; - New submission of an item</a></span></li>
+<li><span><a href="#Items for verification">&nbsp;&nbsp; - Items for verification</a></span></li>
+<li><span><a href="#Chapter 5 : P-DRIVE">Chapter 5 : P-DRIVE</a></span></li>
+<li><span><a href="#What is P-DRIVE?">&nbsp;&nbsp; - What is P-DRIVE?</a></span></li>
+</ul>
+<p><br><br></p>
+<p><a name="Chapter 1 : User registration and profile management"></a></p>
+<h1>Chapter 1 : User registration and profile management</h1>
+<p><a name="User registration"></a></p>
+<h2>User registration</h2>
+<p><strong>User should be registered in advance for submitting an item at P-CUBE.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;registration&quot; on the top of the main page of P-CUBE to move to &quot;User Registration&quot; window.   
+</p>
+</li>
+<li>
+<p>Input an e-mail address and click &quot;registration&quot; button, then &quot;P-CUBE : Membership Notification&quot; e-mail will be sent to the e-mail input.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join1_eng.jpg" />  
+</p>
+<blockquote>
+<p>The e-mail address you input is used as an user ID and e-mail address at P-CUBE. There fore you should input an accurate address.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Clicking URL from the &quot;P-CUBE : Admission Notification&quot; e-mail, it will move to &quot; Member Registration&quot; window.   
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>After inputting information of a user, click &quot;Save Content Input&quot; to finish user registration.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join3_eng.jpg" />  
+</p>
+<blockquote>
+<p>Name, department, password, and pwassword check are field of required input.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Log-in"></a></p>
+<h2>Log-in</h2>
+<p><strong>Similar to Log-in from general website, you can log-in with the e-mail and the password input when registered.</strong>  </p>
+<ol>
+<li>
+<p>Input password in the log-in input form on the top left to the main page of P-CUBE.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/join4_eng.jpg" />  
+</p>
+<blockquote>
+<p>If you forgot your password, click &quot;Forgot your password&quot; link.<br />
+If you forgot your password input when registered, you should refer to administrator directly.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Find a password"></a></p>
+<h2>Find a password</h2>
+<p><strong>when you forgot your password, password edit webpage URL will be supported.</strong>  </p>
+<ol>
+<li>
+<p>If you click &quot;Forgot your password&quot; link, the &quot;find your password&quot; window will be displayed as picture below.  
+</p>
+</li>
+<li>
+<p>Input the e-mail address input registered when joining.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/password1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>An e-mail will be sent to your input e-mail address, and sent e-mail includes URL that can set a password.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/password2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Clicking URL included, the window below will be displayed. Please input new password.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/password3_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Profile Management"></a></p>
+<h2>Profile Management</h2>
+<p><strong>It supplies basic information edit function of a user. The authority of affiliated group and the user can be checked on.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;profile management&quot; of log-in domain at the main screen of P-CUBE.  
+</p>
+</li>
+<li>
+<p>Basic information of a user, password edit, affiliated group, and information of authority can be checked.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/profile1_eng.jpg" />  
+</p>
+<blockquote>
+<p>Affiliated group :  Group except for anonymous group is attached by administrator.<br />
+Authority List : It is assigned by administrator. The receivable authority are 'Item Submission'/'Item Verification'/'Item Access'  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 2 : Integrated search and detailed search"></a></p>
+<h1>Chapter 2 : Integrated search and detailed search</h1>
+<p><a name="Integrated Search"></a></p>
+<h2>Integrated Search</h2>
+<p><strong>Integrated Search searches and supplies the results of title, author, and subject of an item, based on the keyword input.</strong>  </p>
+<ol>
+<li>
+<p>If you wish to use integrated search of P-CUBE, use search window on the top of the page.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/search1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Click detailed search link when you need to search something restricted to a certain organization and collection.  
+</p>
+<blockquote>
+<p><strong>P-CUBE uses Jakarta Lucene as search engine, and includes search functions below.</strong><br />
+1) The contents input into keywords allows searching for title, author and subject of an item.<br />
+2) Words as below are ignored among search keywords.<br />
+E.g.) &quot;a&quot;, &quot;and&quot;, &quot;are&quot; , &quot;as&quot; , &quot;at&quot; , &quot;be&quot; , &quot;but&quot; , &quot;by&quot; , &quot;for&quot; , &quot;if&quot; , &quot;in&quot; , &quot;into&quot;, &quot;is&quot; ,&quot;it&quot; ,&quot;no&quot; , &quot;not&quot; , &quot;of&quot; , &quot;on&quot; , &quot;or&quot; , &quot;such&quot;, &quot;the&quot; , &quot;to&quot; , &quot;was&quot;<br />
+3) Keyword with (*) special symbol behind, it searches all words which contain the keyword.<br />
+E.g.) select* search results : selects, selector, selectman, selecting<br />
+4) If you wrap keyword with (&quot;). It searches multiple keywords.<br />
+E.g.) &quot;organization change&quot;<br />
+5) If you put (+) special symbol in front of a keyword, items with this keyword must show up in the results.<br />
+E.g.) +dog training<br />
+6) Putting (-) special symbol in front of a keyword, items with this keywords are excluded from the results.<br />
+E.g.) dog -training<br />
+7) Searching multiple keywords and input 'AND' inbetween them, items which have two keywords together will be shown in the results.<br />
+E.g.) dog AND training<br />
+8) Searching multiple keywords and input 'OR' inbetween them, items with only one keyword will be shown in the search results.<br />
+E.g.) dog OR training  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Detailed Search"></a></p>
+<h2>Detailed Search</h2>
+<p><strong>Basically P-CUBE searches for whole items. And using detailed search, it searches limited  to certain orgainizations with limited conditions.</strong>  </p>
+<ol>
+<li>
+<p>You can search with limited search range to certain organizations, and also with certain search fields such as title, author, subject, map coordinate scope and etc.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/search2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Same with integreted search,  you can combine keywords using Boolean operator.<br />
+The search is not completed when the first keyword input form is empty.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 3 : A browse"></a></p>
+<h1>Chapter 3 : A browse</h1>
+<p><a name="Organization and Collection browse"></a></p>
+<h2>Organization and Collection browse</h2>
+<p><strong>You can search an item by organization or collection</strong>      </p>
+<ol>
+<li>
+<p>Click &quot;browse &gt; organization &amp; Collection&quot; menu on the left of the window to search collection lists.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Clicking a certain organization or collection will show you the item lists submitted along with sub-organization and collection.  
+</p>
+</li>
+<li>
+<p>Detailed window of organization and collection provides several functions for item search.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse2_eng.jpg" />  
+</p>
+<blockquote>
+<p>Item lists submitted to a related organization with search and browse can be checked.<br />
+You can browse items by sub-organization &amp; collection unit.<br />
+You can check datas through &quot;view more&quot; button more than eight datas offered basically.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can print current item information using &quot;print&quot; button on all detailed screen of item for item browse, and save basic information of current item as text or excel file using &quot;exporting&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse2_2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>If there are NDSL theis papers linked to an item title on item detailed screen, &quot;related NDSL paper&quot; will be shown on the bottom of item detailed screen.  
+</p>
+</li>
+<li>
+<p>Information page of NDSL paper will be shown clicking the title of NDSL paper.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse2_3_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Approval date browse"></a></p>
+<h2>Approval date browse</h2>
+<p><strong>Item can be searched by approval date (time of completed verification).</strong>  </p>
+<p><em>Approval date is defined as the time completed verification of attached files and metadata of item from verifiers after submitting an item by user.</em>  </p>
+<ol>
+<li>
+<p>You can search item by year or month.  
+</p>
+</li>
+<li>
+<p>Approval date, submitted date, title search and alignment about the results can be performed.  
+</p>
+</li>
+<li>
+<p>Click a certain item on the list to move item detailed screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse3_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Author browse"></a></p>
+<h2>Author browse</h2>
+<p><strong>To check the status of item submitted by author, you can search an item by author basis.</strong>  </p>
+<ol>
+<li>
+<p>You can search author by the first letter of the author, or keyword input.  
+</p>
+</li>
+<li>
+<p>Alignment function can be used for the search result of author.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse4_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can check item list of related author, clicking a certain author on the list.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse5_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Title browse"></a></p>
+<h2>Title browse</h2>
+<p><strong>Items can be searched in order of item titles.</strong>  </p>
+<ol>
+<li>
+<p>Items can be searched with keywords or the first letter of item titles.  
+</p>
+</li>
+<li>
+<p>You can arrange the search results based on title, the final date of approval, date of submission and etc of the search results.  
+</p>
+</li>
+<li>
+<p>If you click on certain item from the list, it will move to the detailed screen of items.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse6_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Browse by subject classification"></a></p>
+<h2>Browse by subject classification</h2>
+<p><strong>You can search an item by subject classification.</strong>  </p>
+<ol>
+<li>
+<p>Clicking a certain subject on subject classification list, item lists of submitted relating subject will be shown.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse7_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>You can arrange the search result by title, the final date of approval, submission date bais.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/browse8_eng.jpg" />  
+</p>
+<blockquote>
+<p>The subject classification is set by administrator. Please refer to administrator for more details.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 4 : MY CUBE"></a></p>
+<h1>Chapter 4 : MY CUBE</h1>
+<p><a name="Item Submission List"></a></p>
+<h2>Item Submission List</h2>
+<p><strong>You can search items under submission and waiting for approval after submission.</strong>  </p>
+<p><strong>Item unfinished submission can be continued submitting or deleting, along with additional work such as submitting cancellation on item waiting for approval after submission.</strong>  </p>
+<ol>
+<li>
+<p>&quot; item under submission&quot;, &quot;item waiting for approval after submission&quot; list can be checked.  
+</p>
+</li>
+<li>
+<p>Click &quot;new item submission&quot; button to move &quot;new submission of item&quot; screen.  
+</p>
+</li>
+<li>
+<p>You can delete an item under submission using &quot;delete&quot; button on the list of &quot;item under submission&quot;.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item1_eng.jpg" />  
+</p>
+<blockquote>
+<p>&quot;Item under submission&quot; can be check on the item list of state of 'item under submission'.<br />
+&quot;Item waiting for approval after submission&quot; is an item waiting for verifier approval of collection submitted, after completion of submission.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can contine deleting or submitting related items by clicking &quot;view&quot; button on &quot;item under submitting&quot; list.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Clicking &quot;submission cancellation&quot; button on &quot;item waiting for approval after submitting&quot; list, the item of the state of submission completed will be changed to item under submission. And the related item will be moved to the list of items of under submission.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item3_eng.jpg" />  
+</p>
+<blockquote>
+<p><strong>If the verifier is working on verifying an item, &quot;Cancellation submission&quot; button will be disactivated.</strong>  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Item Approval List"></a></p>
+<h2>Item Approval List</h2>
+<p><strong>You can search the list of items which finished its approval. Those items are open to other users as search and browse function.</strong>  </p>
+<ol>
+<li>
+<p>Click &quot;Approval list of item&quot; on the left menu to check the item list submitted as below.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item4_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>click a certain item on the list to move to item detailed screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item5_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Detailed history on submission and verification of the item will be shown by clicking &quot;View history&quot; of an item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item4_1_eng.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="New submission of an item"></a></p>
+<h2>New submission of an item</h2>
+<p><strong>The new submission of an item is completed through input tasks in several stages such as setting basic information, inputting metadata, and submitting attached files.</strong>  </p>
+<ol>
+<li>
+<p>Select collection, click &quot;next stage &gt;&quot; button. Then it will move to &quot;basic setting&quot; screen.<br />
+   If you have submitted an item similar to the one to be submitted, you can submit an item easily reusing metadata of the item submitted.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item6_eng.jpg" />  
+</p>
+<blockquote>
+<p><strong>Utilization method of existing item submitted</strong><br />
+1) Search list of existing item submitted from current collection, selecting &quot;yes&quot; to &quot;Select item submission templet&quot;.<br />
+2) Select an item to use and click &quot;next stage&quot; button. Then the metadata of related item will be applied to a newly submitted item.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Setting for subject, disclosure, harvesting, DOI, and standard classification of science and technology of an item can be performed on &quot;basic setting&quot; screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item7_eng.jpg" />  
+</p>
+<blockquote>
+<p>Peferred subject classification of user is selected elementarily for subject classification, and several subject classification can be selected.<br />
+If changing the date to &quot;period setting&quot; for opening to the public or not, it will go public after the date selected.<br />
+Integrated search is possible at external service after allowing harvesting metadata. The original data (attatched file) is excluded from harvesting.<br />
+&quot;DOI&quot; (Digital Object Identify) as a global identifier of an item, is used for metadata publication at &quot;datacite.org&quot;, selecting &quot; DOI Granting&quot;.<br />
+Standard classification of Science and Technology is a classification applied when harvesting.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can input metadata of an item on &quot;metadata&quot; screen.<br />
+   You can input into required fields of metadata easily, selecting &quot;compulsory view&quot;. You can add and delete metadata fields which are repeatable with + and - button of metadata.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item8_eng.jpg" />  
+</p>
+<blockquote>
+<p>If you wish to continue where you stopped submission task, please click the &quot;temporary storage&quot; button of each item submission stage at the left bottom.<br />
+Item stopped submission can be checked at &quot;item submission list&quot; of &quot;MY CUBE &gt; item submission list&quot; screen from the menu on the left.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can select attached file related to the item from the first screen of &quot;file upload&quot;. If there is no file to attach, click &quot;next stage&gt;&quot; button to skip this step.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item9_eng.jpg" />  
+</p>
+<blockquote>
+<p>You can register several files at once by dragging several files or folders at window explorer.<br />
+(It is only operated at browsers which support HTML 5 as IE10, Chrome, Firefox and etc.)<br />
+If there is no file attached, click &quot;next step &gt;&quot; button to move to a screen for checking files uploaded.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can edit on format and description of attached file at the second screen of the &quot;file upload&quot;.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item9_1_eng.jpg" />  
+</p>
+<blockquote>
+<p>You can delete the related file, clicking &quot;delete&quot; button.<br />
+File format is automatically recognized by system. You can edit file format if the file format is wrong or you wish to edit.<br />
+You can register a file description and edit the description input. The file description is indexed and used for keyword search.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>You can check the information of basic setting, metadata, and attached file on &quot;submission information check&quot; screen at previous stage. <br />
+   If there is no error on information of item, click &quot;next stage &gt;&quot; button to finish submission.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item10_eng.jpg" />  
+</p>
+<blockquote>
+<p>If you click buttons of each stage, it will move to the stage related to continue inputting work.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Items for verification"></a></p>
+<h2>Items for verification</h2>
+<p><strong>Only 'a verifier or a representative verifier' appointed by administrator according to its collections can use this function.</strong><br />
+<strong>'A verifier' can add comment of verification, and 'representative verifier' can perform 'item approval or rejection' refering to the comment of 'verifier'.</strong>  </p>
+<ol>
+<li>
+<p>Clicking &quot;Item for verification&quot; on the left menu, then the screen will be shown as follows.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item11_eng.jpg" />  
+</p>
+<blockquote>
+<p>&quot;Writing an opinion&quot; button of an item waiting for verification only shows to verifiers.<br />
+&quot;Bring&quot; button of an item waiting for verification only shows to verifiers.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Click &quot;writing an opinion&quot; button from the list of item waiting for verification to move to a screen writing a verification opinion on the related item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item12_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Opinion on written item can be checked as below.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item13_eng.jpg" />  
+</p>
+<blockquote>
+<p>If you write a verification opinion, the number of opinions written on the name of related item from &quot;item waiting for verification&quot;.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Click &quot;Bring&quot; button from the list of item waiting for verification to move to screen of &quot;verification task&quot; screen.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/item14_eng.jpg" />  
+</p>
+<blockquote>
+<p>Verfication task : It selects approval and rejection of verification.<br />
+- Click &quot;Approval&quot; button and approve the verification of the related item.<br />
+- click &quot;Rejection&quot; button and disapprove the verification of the related item. Then, it will return to the state of submission.<br />
+Other Work : It is used when one wants to use it next time instead of verifying it right way.<br />
+- leave the related item in the state of verifying, with clicking &quot;Working on later&quot; button.<br />
+- Click &quot;suspension of verification&quot; button and leave the related item in the state of waiting for verification.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>If you approve, the related item will be finished verification, and you can check it thorugh search browse function.  
+</p>
+<blockquote>
+<p>For items set as the 'nondisclosure' or which still has time left until its' 'set date of going on public', it is open to other users.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 5 : P-DRIVE"></a></p>
+<h1>Chapter 5 : P-DRIVE</h1>
+<p><a name="What is P-DRIVE?"></a></p>
+<h2>What is P-DRIVE?</h2>
+<p><strong>P-DRIVE supports users with individual storage space for file save and management.</strong><br />
+<strong>It is easier for users to use uploading a huge file  which is hard to upload directly when submitting an attached file.</strong>  </p>
+<ol>
+<li>
+<p>The screen as below will be shown, clicking &quot;P-DRIVE&quot; on the left menu. When registering an external file which takes longer time downloading, P-CUBE saves and downloads the file to P-DRIVE.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/pdrive1_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>By clicking &quot;external link registration&quot; button, the 'external linked file registration&quot; window will pop up. Clicking &quot;File Registration&quot; button after inputting HTTP or FTP linked address of a file to be downloaded, the file at related location will be registered to P-DRIVE.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/pdrive2_eng.jpg" />  
+</p>
+</li>
+<li>
+<p>Click &quot;P-DRIVE&quot; button to use a file of user saved at &quot;P-DRIVE&quot; on screen of file upload under submitting an item.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/pdrive3_eng.jpg" />  
+</p>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

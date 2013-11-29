@@ -1,0 +1,1096 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Developer_Manual_eng_2013.11.28,1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{margin:0;padding:0;}
+body {
+         font:13.34px helvetica,arial,freesans,clean,sans-serif;
+         color:black;
+         line-height:1.4em;
+         background-color: #F8F8F8;
+         padding: 0.7em;
+}
+p {
+         margin:1em 0;
+         line-height:1.5em;
+}
+table {
+         font-size:inherit;
+         font:100%;
+         margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono",monospace;}
+pre {
+         margin:1em 0;
+         font-size:12px;
+         background-color:#eee;
+         border:1px solid #ddd;
+         padding:5px;
+         line-height:1.5em;
+         color:#444;
+         overflow:auto;
+         -webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+         padding:0;
+         font-size:12px;
+         background-color:#eee;
+         border:none;
+}
+code {
+         font-size:12px;
+         background-color:#f8f8ff;
+         color:#444;
+         padding:0 .2em;
+         border:1px solid #dedede;
+}
+img{border:1px solid gray;;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:4em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:2em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+h4{font-size:130%;padding-top:1.5em;text-align:center;}
+h5{font-size:150%;padding-top:.5em;padding-left:20px;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+   font-size: 0.83em;
+   vertical-align: super;
+   line-height: 0;
+}
+* {
+         -webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+   body {
+      width: 854px;
+      margin:0 auto;
+   }
+}
+@media print {
+         table, pre {
+                  page-break-inside: avoid;
+         }
+         pre {
+                  word-wrap: break-word;
+         }
+}
+
+#toc {
+	list-style: none;
+	margin-bottom: 20px;
+}
+#toc li {
+	background: url(dot.gif) repeat-x bottom left;
+	overflow: hidden;
+	padding-bottom: 2px;
+	font-size:100%;
+}
+#toc a,
+#toc span {
+	display: inline-block;
+	background: #fff;
+	position: relative;
+	bottom: -4px;
+	color:black;
+}
+#toc a {
+	float: left;
+}
+#toc span {
+	float: left;
+	padding: 0 2px 3px 0;
+}
+
+
+
+
+/* Main style for the table */
+
+.dp-highlighter
+{
+	font-family: "Courier New" , Courier, mono;
+	font-size: 12px;
+	border: 1px solid #4e4747;
+	background-color: #fff;
+	width: 99%;
+	overflow: auto;
+	margin: 0px 0px 0px 0px;
+}
+
+.dp-highlighter .bar
+{
+	padding-left: 45px;
+}
+
+.dp-highlighter.collapsed .bar, .dp-highlighter.nogutter .bar
+{
+	padding-left: 0px;
+}
+
+.dp-highlighter ol
+{
+	margin: 0px 0px 1px 5px; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+	padding: 0px;
+	color: #4e4747;
+}
+
+.dp-highlighter.nogutter ol
+{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.dp-highlighter ol li, .dp-highlighter .columns div
+{
+	border-left: 0px;
+	background-color: #fff;
+	padding-left: 10px;
+	line-height: 14px;
+}
+
+.dp-highlighter.nogutter ol li, .dp-highlighter.nogutter .columns div
+{
+	border: 0;
+}
+
+.dp-highlighter .columns
+{
+	color: gray;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dp-highlighter .columns div
+{
+	padding-bottom: 5px;
+}
+
+.dp-highlighter ol li.alt
+{
+	background-color: #f8f8f8;
+}
+
+.dp-highlighter ol li span
+{
+	color: Black;
+}
+
+/* Adjust some properties when collapsed */
+
+.dp-highlighter.collapsed ol
+{
+	margin: 0px;
+}
+
+.dp-highlighter.collapsed ol li
+{
+	display: none;
+}
+
+/* Additional modifications when in print-view */
+
+.dp-highlighter.printing
+{
+	border: none;
+}
+
+.dp-highlighter.printing .tools
+{
+	display: none !important;
+}
+
+.dp-highlighter.printing li
+{
+	display: list-item !important;
+}
+
+/* Styles for the tools */
+
+.dp-highlighter .tools
+{
+	padding: 3px 8px 3px 10px;
+	border-bottom: 1px solid #2B91AF;
+	font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: silver;
+}
+
+.dp-highlighter.collapsed .tools
+{
+	border-bottom: 0;
+}
+
+.dp-highlighter .tools a
+{
+	font-size: 9px;
+	color: gray;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.dp-highlighter .tools a:hover
+{
+	color: red;
+	text-decoration: underline;
+}
+
+/* About dialog styles */
+
+.dp-about { background-color: #fff; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; width: 60px; height: 22px; }
+
+/* Language specific styles */
+
+.dp-xml {}
+.dp-xml .cdata { color: #ff1493; }
+.dp-xml .comments { color: green; }
+.dp-xml .tag { font-weight: bold; color: blue; }
+.dp-xml .tag-name { color: black; font-weight: bold; }
+.dp-xml .attribute { color: red; }
+.dp-xml .attribute-value { color: blue; }
+
+</style>
+</head>
+<body>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/Developer_Manual.jpg" />
+<br></p>
+<h4>- Table of Contents -</h4>
+<ul id="toc">
+<li><span><a href="#Chapter 1 : Outline">Chapter 1 : Outline</a></span> </li>
+<li><span><a href="#Document Outline">&nbsp;&nbsp; - Document Outline</a></span></li>
+<li><span><a href="#Chapter 2 : JAVA Installation">Chapter 2 : JAVA Installation</a></span></li>
+<li><span><a href="#JAVA Installation">&nbsp;&nbsp; - JAVA Installation</a></span></li>
+<li><span><a href="#Chapter 3 : DB Server Settings">Chapter 3 : DB Server Settings</a></span></li>
+<li><span><a href="#MySQL Installation">&nbsp;&nbsp; - MySQL Installation</a></span></li>
+<li><span><a href="#Chapter 4 : WEB Server Setting">Chapter 4 : WEB Server Setting</a></span></li>
+<li><span><a href="#Apache Httpd Server Settings">&nbsp;&nbsp; - Apache Httpd Server Settings</a></span></li>
+<li><span><a href="#Chapter 5 : WAS Server Setting">Chapter 5 : WAS Server Setting</a></span></li>
+<li><span><a href="#Tomcat server installation">&nbsp;&nbsp; - Tomcat server installation</a></span></li>
+<li><span><a href="#Apache Tomcat Link">&nbsp;&nbsp; - Apache Tomcat Link</a></span></li>
+<li><span><a href="#Chapter 6 : Eclipse Installation">Chapter 6 : Eclipse Installation</a></span></li>
+<li><span><a href="#Eclipse (developer PC)">&nbsp;&nbsp; - Eclipse (developer PC)</a></span></li>
+<li><span><a href="#Installation of egit on Eclipse">&nbsp;&nbsp; - Installation of egit on Eclipse</a></span></li>
+<li><span><a href="#Chapter 7 : P-CUBE Project Check Out using GitHub">Chapter 7 : P-CUBE Project Check Out using GitHub</a></span></li>
+<li><span><a href="#P-CUBE Check Out">&nbsp;&nbsp; - P-CUBE Check Out</a></span></li>
+<li><span><a href="#Chapter 8 : P-CUBE Project Installation">Chapter 8 : P-CUBE Project Installation</a></span></li>
+<li><span><a href="#Project extraction and upload">&nbsp;&nbsp; - Project extraction and upload</a></span></li>
+<li><span><a href="#Environment setting file upload of P-CUBE project">&nbsp;&nbsp; - Environment setting file upload of P-CUBE project</a></span></li>
+<li><span><a href="#Chapter 9 : Environment Settings of P-CUBE Project">Chapter 9 : Environment Settings of P-CUBE Project</a></span></li>
+<li><span><a href="#File setting of cube.cfg">&nbsp;&nbsp; - File setting of cube.cfg</a></span></li>
+<li><span><a href="#Setting for log storage">&nbsp;&nbsp; - Setting for log storage</a></span></li>
+<li><span><a href="#Environment setting for Tomcat">&nbsp;&nbsp; - Environment setting for Tomcat</a></span></li>
+<li><span><a href="#solr settings">&nbsp;&nbsp; - solr settings</a></span></li>
+<li><span><a href="#Setting for Script Launcher execution">&nbsp;&nbsp; - Setting for Script Launcher execution</a></span></li>
+<li><span><a href="#Setting on usage or not">&nbsp;&nbsp; - Setting on usage or not</a></span></li>
+</ul>
+<p><br><br></p>
+<p><a name="Chapter 1 : Outline"></a></p>
+<h1>Chapter 1 : Outline</h1>
+<p><a name="Document Outline"></a></p>
+<h2>Document Outline</h2>
+<ol>
+<li>
+<p>This document describes the settings for installation and operation for P-CUBE.  
+</p>
+</li>
+<li>
+<p>P-CUBE is developed with JAVA, and can be operated at any operation system which has JDK installed.  
+</p>
+</li>
+<li>
+<p>This document is a (developer) manual for P-CUBE, version of 1.0.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 2 : JAVA Installation"></a></p>
+<h1>Chapter 2 : JAVA Installation</h1>
+<p><a name="JAVA Installation"></a></p>
+<h2>JAVA Installation</h2>
+<ol>
+<li>
+<p>JDK installation is required since P-CUBE has been developed based on JDK.  
+</p>
+</li>
+<li>
+<p>Please download JDK at <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>  
+</p>
+</li>
+<li>
+<p>Please install JDK using reference below.  
+</p>
+<blockquote>
+<p># <strong>mkdir -p /usr/java</strong><br />
+# <strong>cd /usr/java</strong><br />
+# <strong>chmod 700 /tmp/jdk-6u45-linux-x64.bin</strong><br />
+# <strong>/tmp/jdk-6u45-linux-x64.bin</strong>  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Setting an environment variables  
+</p>
+<blockquote>
+<p># <strong>export JAVA_HOME=/usr/java/jdk1.6.0_10</strong><br />
+# <strong>export PATH=$JAVA_HOME/bin:$PATH</strong>  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 3 : DB Server Settings"></a></p>
+<h1>Chapter 3 : DB Server Settings</h1>
+<p><a name="MySQL Installation"></a></p>
+<h2>MySQL Installation</h2>
+<ol>
+<li>
+<p>download MySQL from <a href="http://dev.mysql.com/downloads">http://dev.mysql.com/downloads</a>   
+</p>
+</li>
+<li>
+<p>If you have MySQL already installed, please delete as follows.  
+</p>
+<blockquote>
+<p>[local-host]# rpm -qa | grep -i mysql<br />
+mysql-5.0.22-2.1.9.1<br />
+mysqlclient10-3.23.58-4.RHEL4.1  
+</p>
+<p>[local-host]# rpm -e mysql --nodeps<br />
+warning: /etc/my.cnf save as /etc/my.cnf.rpmsave<br />
+[local-host]# rpm -e mysqlclient10 </p>
+</blockquote>
+</li>
+<li>
+<p>Refer to below and install MySQL package.  
+</p>
+<blockquote>
+<p>[local-host]# rpm -ivh MySQL-server-community-5.1.25-0.rhel5.i386.rpm MySQL-client-community-5.1.72-1.rhel5.x86_64.rpm  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Check on MySQL installation is as follows.  
+</p>
+<blockquote>
+<p>[local-host]# /usr/bin/mysql_secure_installation  
+</p>
+</blockquote>
+</li>
+<li>
+<p>MySQL access as root user is as follows.  
+</p>
+<blockquote>
+<p>[local-host]# mysql -u root -p<br />
+Enter password:<br />
+Welcome to the MySQL monitor. Commands end with ; or \g.<br />
+Your MySQL connection id is 13<br />
+Server version: 5.1.25-rc-community MySQL Community Server (GPL)  
+</p>
+<p>Type 'help;&quot; or '\h' for help. '\c' to clear the buffer.  
+</p>
+<p>mysql&gt;  
+</p>
+</blockquote>
+</li>
+<li>
+<p>The start and the end of MySQL are as follows.  
+</p>
+<blockquote>
+<p>[local-host]# service mysql status<br />
+[local-host]# service mysql stop<br />
+[local-host]# service mysql start  
+</p>
+</blockquote>
+</li>
+<li>
+<p>It creates a user and MySQL DB for P-CUBE installation, and sets an authority.  
+</p>
+<blockquote>
+<p>Input each DB name, DB username and password to use into spaces for 'DBNAME', 'USERNAME', 'PASSWORD'.  
+</p>
+<p>mysql&gt; CREATE DATABASE 'DBNAME' DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;<br />
+mysql&gt; use mysql;<br />
+mysql&gt; insert into user (host,user,password) values('localhost','USERNAME',password('PASSWORD'));<br />
+mysql&gt; insert into user (host,user,password) values('%','USERNAME',password('PASSWORD'));<br />
+mysql&gt; insert into db values('%','DBNAME','USERNAME','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y');<br />
+mysql&gt; insert into db values('localhost','DBNAME','USERNAME','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y');<br />
+mysql&gt; grant all privileges on <em>.</em> to 'USERNAME'@'%' identified by 'PASSWORD';  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 4 : WEB Server Setting"></a></p>
+<h1>Chapter 4 : WEB Server Setting</h1>
+<p><a name="Apache Httpd Server Settings"></a></p>
+<h2>Apache Httpd Server Settings</h2>
+<ol>
+<li>
+<p>Download Apache httpd from <a href="http://www.apache.org">http://www.apache.org</a>  
+</p>
+</li>
+<li>
+<p>Unzip the file you downloaded as follows.  
+</p>
+<blockquote>
+<p># gunzip -d httpd-2_0_NN.tar.gz<br />
+# tar xvf httpd-2_0_NN.tar  
+</p>
+</blockquote>
+</li>
+<li>
+<p>An installation of Apache httpd is as follows.  
+</p>
+<blockquote>
+<p># up2date httpd  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Start of an Apache httpd is as follows.  
+</p>
+<blockquote>
+<p># chkconfig httpd on<br />
+# /etc/init.d/httpd start  
+</p>
+<p>*Apache Httpd Server is a WEB server used for P-CUBE development and test, and it is not required to use. WEB server can be changed depending on a situation of an institute.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 5 : WAS Server Setting"></a></p>
+<h1>Chapter 5 : WAS Server Setting</h1>
+<p><a name="Tomcat server installation"></a></p>
+<h2>Tomcat server installation</h2>
+<ol>
+<li>
+<p>Download Tomcat from <a href="http://tomcat.apache.org/download-60.cgi">http://tomcat.apache.org/download-60.cgi</a>  
+</p>
+</li>
+<li>
+<p>Unzip the file you downloaded as follows.  
+</p>
+<blockquote>
+<p># tar zxvf /tmp/apache-tomcat-6.0.37.tar.gz  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Find a route of Tomcat server and get into it.  
+</p>
+<blockquote>
+<p># cd tomcat6  
+</p>
+</blockquote>
+</li>
+<li>
+<p>The start and stop of server are as follows.  
+</p>
+<blockquote>
+<p># /bin/startup.sh<br />
+# /bin/shutdown.sh  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Apache Tomcat Link"></a></p>
+<h2>Apache Tomcat Link</h2>
+<ol>
+<li>
+<p>Tomcat connector can be downloaded from <a href="http://tomcat.apache.org/download-connectors.cgi">http://tomcat.apache.org/download-connectors.cgi</a>  
+</p>
+</li>
+<li>
+<p>Unzip the file you downloaded as follows.  
+</p>
+<blockquote>
+<p># tar zxvf /tmp/tomcat-connectors-1.2.37-src.tar.gz<br />
+# cd tomcat-connectors-1.2.37-src<br />
+# cd native<br />
+# ./buildconf.sh  
+</p>
+<p><strong>Install as follows. 'Apache route' means the installation route for Apache.</strong><br />
+# ./configure --with-apxs=/Apache route/bin/apxs<br />
+# ls /Apache route/modules/mod_jk.so  
+</p>
+<p><strong>Creates a linkage file</strong><br />
+# /Apache route/conf/workers.properties<br />
+# /Apache route/conf/uriworkermaps.properties  
+</p>
+<p>* Linkage of Apache and Tomcat is only applicable when using Apache as WEB server and Tomcat as WAS server.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 6 : Eclipse Installation"></a></p>
+<h1>Chapter 6 : Eclipse Installation</h1>
+<p><a name="Eclipse (developer PC)"></a></p>
+<h2>Eclipse (developer PC)</h2>
+<ol>
+<li>
+<p>Download Eclipse from <a href="http://www.eclipse.org/downloads">http://www.eclipse.org/downloads</a> and unzip the file.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipse1.jpg" />  
+</p>
+</li>
+<li>
+<p>Create a shortcut icon of Eclipse execution file, and add to properties as follows.  
+</p>
+<blockquote>
+<p>C:\eclipse\eclipse.exe -vmargs -Xms128M -Xmx256M  
+</p>
+<p><strong>Properties description</strong><br />
+- C:\eclipse\eclipse.exe : Location of Eclipse execution file<br />
+- vmargs -Xms128M -Xmx256M : Eclipse memory settings is recommended for securing memory.    
+</p>
+</blockquote>
+</li>
+<li>
+<p>Executing Eclipse will lead to a workspace setting as follows. After setting up of location for project, click &quot;OK&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipse2.jpg" />  
+</p>
+</li>
+</ol>
+<p><a name="Installation of egit on Eclipse"></a></p>
+<h2>Installation of egit on Eclipse</h2>
+<ol>
+<li>
+<p>Source of P-CUBE is registered at GitHub. For synchronization with source, egit is recommended.  
+</p>
+</li>
+<li>
+<p>Execute Eclipse, and select help -&gt; Install new software above.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipsegit1.jpg" />  
+</p>
+</li>
+<li>
+<p>Click add to add a site link.  
+</p>
+<blockquote>
+<p><strong>Name : egit</strong><br />
+<strong>Location : http://www.jgit.org/updates</strong>  
+</p>
+</blockquote>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipsegit2.jpg" />  
+</p>
+</li>
+<li>
+<p>Select plug-in to install, and &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipsegit3.jpg" />  
+</p>
+</li>
+<li>
+<p>After checking plug-in to install from Install Details, click &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipsegit4.jpg" />  
+</p>
+</li>
+<li>
+<p>After checking on licence, click &quot;finish&quot; button to finish installation.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/eclipsegit5.jpg" />  
+</p>
+</li>
+<li>
+<p>If you restart Eclipse, the installation will be completed.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 7 : P-CUBE Project Check Out using GitHub"></a></p>
+<h1>Chapter 7 : P-CUBE Project Check Out using GitHub</h1>
+<p><a name="P-CUBE Check Out"></a></p>
+<h2>P-CUBE Check Out</h2>
+<ol>
+<li>
+<p>GitHub as system of dispersed version management is used for shape management of P-CUBE project. </p>
+</li>
+<li>
+<p>Select File -&gt; Import of Eclipse.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git1.jpg" />  
+</p>
+</li>
+<li>
+<p>A window to select which to bring as below appears. Select &quot;Project from Git&quot; and &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git2.jpg" />  
+</p>
+</li>
+<li>
+<p>Select &quot;Clone URI&quot; among importing sources from two storage, and click &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git3.jpg" />  
+</p>
+</li>
+<li>
+<p>Input &quot;https://github.com/KISTI/P-CUBE.git&quot; to URI as below, and click &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git4.jpg" />  
+</p>
+</li>
+<li>
+<p>Select &quot;master&quot; and click &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git5.jpg" />  
+</p>
+</li>
+<li>
+<p>Set a route to install at a PC of a developer, and click &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git6.jpg" />  
+</p>
+</li>
+<li>
+<p>Select a project to import, and click &quot;Next&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git7.jpg" />  
+</p>
+</li>
+<li>
+<p>Input projext name and complete by clicking &quot;Finish&quot; button.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/git8.jpg" />  
+</p>
+</li>
+<li>
+<p>Project creation is completed.  
+</p>
+</li>
+<li>
+<p>Check out OAI Project in the same way with CUBE.  
+</p>
+<blockquote>
+<p>OAI Project is information harvesting and open project based on OAI-PMH, international standard protocol. OAI project is necessary for information harvestment and application.<br />
+URI of number 5 is &quot;https://github.com/KISTI/P-CUBE-OAI.git&quot;.  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Chapter 8 : P-CUBE Project Installation"></a></p>
+<h1>Chapter 8 : P-CUBE Project Installation</h1>
+<p><a name="Project extraction and upload"></a></p>
+<h2>Project extraction and upload</h2>
+<ol>
+<li>
+<p>After clicking on the right mouse button on &quot;Cube&quot; of Eclipse and &quot;OAI&quot; project, click &quot;Export&quot;.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/export1.jpg" />  
+</p>
+</li>
+<li>
+<p>On Export list, select Web / WAR file and click &quot;Next &gt;&quot; button.  
+</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/export2.jpg" />  
+</p>
+</li>
+<li>
+<p>After saving the route and name of the file created, click &quot;finish&quot; button.  	</p>
+<p><img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/export3.jpg" />  
+</p>
+<blockquote>
+<p>Save the name of Export WAR file of &quot;CUBE&quot; as cube.war.<br />
+Save the name of Export WAR file of &quot;OAI&quot; as oai.war.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Execute FTP program and connect to a server.  
+</p>
+</li>
+<li>
+<p>Please upload &quot;cube.war&quot;, and &quot;oai.war&quot; file exported to a webapps route in Tomcat.  
+</p>
+<blockquote>
+<p>/tomcat6/webapps/  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Environment setting file upload of P-CUBE project"></a></p>
+<h2>Environment setting file upload of P-CUBE project</h2>
+<p><strong>A resource route of a server for uploading an environment setting folder below is used for 'data/home/digi-kor/'.  From this time forward, we will use a directory which saves an environment setting file named 'resource route'. A resource folder is changable depending on environment of each institute.</strong>  </p>
+<ol>
+<li>
+<p>Please connect to a server, executing FTP program.  
+</p>
+</li>
+<li>
+<p>Copy 'cube', 'solr', 'share_lib' folders in 'project-works' folder from &quot;CUBE&quot; of Eclipse to the resource route of a server.<br />
+<img src="https://raw.github.com/KISTI/P-CUBE/gh-pages/images/wiki/ftp1.jpg" />  
+</p>
+</li>
+<li>
+<p>Please start Tomcat again for project creation using war file.  
+</p>
+</li>
+</ol>
+<p><a name="Chapter 9 : Environment Settings of P-CUBE Project"></a></p>
+<h1>Chapter 9 : Environment Settings of P-CUBE Project</h1>
+<p><a name="File setting of cube.cfg"></a></p>
+<h2>File setting of cube.cfg</h2>
+<p><strong>Environment setting is a setting for files uploaded to server. Please edit a route and a file carefully.</strong>  </p>
+<ol>
+<li>
+<p>Proceed a file setting of cube.cfg which is a file for 'CUBE&quot; basic setting in 'cube/config' route of 'resource route'.  
+</p>
+<blockquote>
+<p><strong>Setting for required management information</strong><br />
+cube.dir : cube folder route of 'resource route'. E.g.) /data/home/digi-kor/cube/<br />
+cube.hostname : It is a HOST address for CUBE. E.g.) mdr.kisti.re.kr<br />
+cube.baseUrl : It is a URL address for CUBE. E.g.) http://www.datacite.kr<br />
+cube.name : It is a name of a site for CUBE. E.g.) P-CUBE<br />
+db.url : A route for server MySQL. E.g.) jdbc:mysql://127.0.0.1/cube?characterEncoding=utf-8<br />
+db.driver : It is a DB driver. E.g.) core.log.jdbc.driver.MysqlDriver<br />
+db.username : Username of DB.<br />
+db.password : It is a password of DB user.<br />
+handle.prefix : It is an unique string used for distinguishing system. E.g.) kisti_kdr<br />
+<strong>Input prefix of system given by CNRI to use for handle.prefix. Functions for linkage to CNRI are excluded from P-CUBE, so please refer to other sources.</strong>  
+</p>
+<p><strong>Setting server information for sending an e-mail.</strong><br />
+mail.server : It is a name for a server when sending an e-mail with a name of e-mail server.<br />
+mail.server.username : E-mail Address, An e-mail address for sending an e-mail.<br />
+mail.server.password : E-mail password, it is a password for sending e-mail address.<br />
+mail.admin : It is an e-mail address of a administrator which receives an alarm e-mail when warning of monitoring occurs.  
+</p>
+<p><strong>Settings related google analytics</strong><br />
+xmlui.google.analytics.change.key : It is a google analytics key value. You can get site statistics information after registering to google analytics. If you do not wish to use the function of google analytics, please leave it empty.  
+</p>
+<p><strong>Settings related google chart</strong><br />
+google.chart.username : An e-mail address which has an authority for searching websites registered to google analytics.<br />
+google.chart.password : A password which has an authority to search google analytics.<br />
+google.chart.instituteCode : It is used as linkage authority code of google analytics for access statistics of statistics menu.  
+</p>
+<p><strong>NDSL openAPI search settings</strong><br />
+ndsl.openapi.key : ndsl.openapi.key : It is key value for NDSL linkage. It is used for showing information of thesis similar to a related item of detail item view. Issue key at <a href="http://nos.ndsl.kr/">http://nos.ndsl.kr</a>  
+</p>
+<p><strong>System monitoring settings</strong><br />
+cube.system.monitoring.use : Usage of system monitoring or not.  It is used for administrators to check user information on CPU, MEMORY, Storage and etc. The basic setting value is 'N'.  
+</p>
+<p><strong>Compression sending setting</strong><br />
+rapidant.use.yn : Availability of rapidant applet for uploading a file when registering an item. The basic setting value is 'N'.  
+</p>
+<p><strong>subject classification setting</strong><br />
+subject.category.yn : subject.category.yn : Availability of subject classification selection and prefered subject classification of a user. The basic setting value is 'Y'.  
+</p>
+<p><strong>Triple Store (Mulgara) Setting</strong><br />
+mulgara.use.yn : Availability of mulgara which shows lists of related information items of detailed item window at the bottom of the page. The basic setting value is 'N'.  
+</p>
+<p><strong>Setting Item Exporting</strong><br />
+Set exporting method and order of exporting item according to the method, as exporting information of item at item detailed screen.<br />
+itemexport.count : The number of exporting methods. The number should be same as the number of exporting methods to be set.<br />
+itemexport.1 : The number after the 'itemexport.' defines order displayed at screen. Add by increasing the number to input several methods. Setting content should input the name of exporting method and write format. Format should be written as 'element name|displayed name on screen', arranged and differentiated with comma.<br />
+E.g.) datacite Format:contributor|Writer, title|Title, publisher|Publisher, identifier.uri|URL  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Setting for log storage"></a></p>
+<h2>Setting for log storage</h2>
+<p><strong>log4j is a java based logging utility and saves log history as a file.</strong></p>
+<ol>
+<li>
+Please proceed log4j.properties file settings, which is &quot;CUBE&quot; log setting file in 'cube/config' route of 'resource route'.  
+
+<blockquote>
+<p><strong>The three settings below are routes for log file of CUBE to be create.</strong><br />
+log4j.appender.A1.File<br />
+log4j.appender.A2.File<br />
+log4j.appender.A3.File  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Environment setting for Tomcat"></a></p>
+<h2>Environment setting for Tomcat</h2>
+<p><strong>WAS Server was described based on Tomcat. When using other kinds of WAS server, please refer to a product manual.</strong>  </p>
+<ol>
+<li>
+<p>Change DB route (including DB name), username, password in <strong>dataSource bean</strong> of WEB-INF/classes/config/applicationContext.xml file of &quot;OAI&quot; and &quot;CUBE&quot; project from webapps folder of Tomcat.</p>
+<div class="dp-highlighter">
+<ol class="dp-xml">
+<li>
+<span class="comments"><</span><span class="comments">property </span>
+<span class="attribute">name</span><span>="url"</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">value</span><span class="comments">></span><span>jdbc:mysql://127.0.0.1/cube?characterEncoding=utf-8</span><span class="comments"><</span><span class="comments">/</span><span class="comments">value</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">property</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">property</span>
+<span class="attribute">name</span><span>="username"</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<</span><span class="comments">value</span><span class="comments">></span><span>___</span><span class="comments"><</span><span class="comments">/</span><span class="comments">value</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">property</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">property</span>
+<span class="attribute">name</span><span>="password"</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<</span><span class="comments">value</span><span class="comments">></span><span>___</span><span class="comments"><</span><span class="comments">/</span><span class="comments">value</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">property</span><span class="comments">></span>
+</li>
+</ol>
+</div>  
+</li>
+<li>
+<p>Change config file route, username, and password for <strong>cube-config, cube.dir</strong> of WEB-INF/web.xml file for &quot;CUBE&quot;, &quot;OAI&quot; project in webapps folder of Tomcat.  
+</p>
+<div class="dp-highlighter">
+<ol class="dp-xml">
+<li>
+<span class="comments"><</span><span class="comments">context-param</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">description</span><span class="comments">></span>
+</li>
+<li>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;The location of the main Cube configuration file</span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">/</span><span class="comments">description</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">param-name</span><span class="comments">></span><span>cube-config</span><span class="comments"><<value></span><span class="comments">param-name</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;&nbsp;&nbsp;<<value></span><span class="comments">param-value</span><span class="comments">></span><span>/data/home/digi-kor/cube/config/cube.cfg</span><span class="comments"><</span><span class="comments">/</span><span class="comments">param-value</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">context-param</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">context-param</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">description</span><span class="comments">></span>
+</li>
+<li>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;The location of the main Cube configuration file</span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">/</span><span class="comments">description</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;<<value></span><span class="comments">param-name</span><span class="comments">></span><span>cube.dir</span><span class="comments"><<value></span><span class="comments">param-name</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"> &nbsp;&nbsp;&nbsp;&nbsp;<<value></span><span class="comments">param-value</span><span class="comments">></span><span>/data/home/digi-kor/cube</span><span class="comments"><</span><span class="comments">/</span><span class="comments">param-value</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">context-param</span><span class="comments">></span>
+</li>
+</ol>
+</div>  
+<blockquote>
+<p><strong>Change fields as below one more time for OAI project.</strong>  
+</p>
+</blockquote>
+<div class="dp-highlighter">
+<ol class="dp-xml">
+<li>
+<span class="comments"><</span><span class="comments">context-param</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<<value></span><span class="comments">param-name</span><span class="comments">></span><span>properties</span><span class="comments"><</span><span class="comments">/</span><span class="comments">param-name</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<</span><span class="comments">param-value</span><span class="comments">></span><span>/data/home/digi-kor/cube_dev/config/oaicat.properties</span><span class="comments"><</span><span class="comments">/</span><span class="comments">param-value</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<</span><span class="comments">description</span><span class="comments">></span>
+</li>
+<li>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;The location of the oaicat.properties file containing</span>
+</li>
+<li>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;datapairs used to initialize the OAI repository software.</span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<</span><span class="comments">/</span><span class="comments">description</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">context-param</span><span class="comments">></span>
+</li>
+</ol>
+</div>  
+</li>
+</ol>
+<p><a name="solr settings"></a></p>
+<h2>solr settings</h2>
+<ol>
+<li>
+<p>Create solr.xml file to conf/catalina/localhost in Tomcat.  
+</p>
+<blockquote>
+<p><strong>Contents of a file (Please input correctly, fitting for solr folder route of 'resource route')</strong>  
+</p>
+</blockquote>
+<div class="dp-highlighter">
+<ol class="dp-xml">
+<li>
+<span class="comments"><</span><span class="comments">Context</span>
+<span class="attribute">docBase</span><span>="/data/home/digi-kor/solr_home/solr-4.3.1.war"</span>
+<span class="attribute">debug</span><span>="0"</span>
+<span class="attribute">crossContext</span><span>="true"</span>
+<span class="attribute">path</span><span>="/solr"</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments">&nbsp;&nbsp;<</span><span class="comments">Environment</span>
+<span class="attribute">name</span><span>="solr/home"</span>
+<span class="attribute">type</span><span>="java.lang.String"</span>
+<span class="attribute">value</span><span>="/data/home/digi-kor/solr_home/cube"</span>
+<span class="attribute">override</span><span>="true"</span><span class="comments">/</span><span class="comments">></span>
+</li>
+<li>
+<span class="comments"><</span><span class="comments">/</span><span class="comments">Context</span><span class="comments">></span>
+</li>
+</ol>
+</div>  
+</li>
+<li>
+<p>Add solr route to 'common.loader' of catalina.properties file on conf route in Tomcat.  
+</p>
+<blockquote>
+<p><strong>Add after the text written, fitting for the route.</strong><br />
+,/home/solr/ext/*.jar  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Setting for Script Launcher execution"></a></p>
+<h2>Setting for Script Launcher execution</h2>
+<ol>
+<li>
+<ol>
+<li>Create a jar file from the route of 'webapps/cube/WEB-INF/classes' in Tomcat. The created file is added to cube/ lib route in 'resource folder'.  
+</li>
+</ol>
+<blockquote>
+<p>Creates as below, after accessing a route on server command window.<br />
+# jar cvf pcube.jar kr config spring  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Copy all the library file from 'tomcat6/webapps/cube/WEB-INF/lib' route of server, and add to the route for 'cube/lib' of 'resource folder'.  
+</p>
+</li>
+<li>
+<p>Copy 'servlet-api.jar' file of  'tomcat6/lib' route of a server and add to 'cube/lib' route of 'resource folder' by copying.  
+</p>
+</li>
+<li>
+<p>Instructions for Script Launcher</p>
+<blockquote>
+<p>Script Launcher simply performs with prompt command. It is set for using functions of DB initialization, administrator creation, harvesting, and index of MySQL at P-CUBE.  
+</p>
+<p>Launcher only those registered at 'cube/config/launcher.xml' is applicable.<br />
+Use Script Launcher with command in 'cube/bin' folder of command window for server.<br />
+The below shows a few important instruction among registered launcher.  
+</p>
+<p><strong>database checking (DB linkage test)</strong><br />
+test-database  
+</p>
+<p><strong>init database (DB initialization using sql file)</strong><br />
+init-database &lt;sql_file&gt;  
+</p>
+<p><strong>create administrator (Create Administrator)</strong><br />
+create-administrator -e email -f first_name -l last_name -c language -p password  
+</p>
+<p><strong>harvest (Harvesting from external source)</strong><br />
+ PING OAI server : harvest -g -s oai_source -i oai_set_id<br />
+ RUNONCE : harvest -o -e eperson(userEmail) -c collectionId -t harvest_type -a oai_source -i oai_set_id -m metadata_format<br />
+ SETUP :  harvest -s -c collectionId -t harvest_type -a oai_source -i oai_set_id -m metadata_format<br />
+ RUN : harvest -r -e eperson(userEmail) -c collectionId ( i.e) pcube harvest -r -e admin@kisti.re.kr -c 7 )<br />
+ START harvest scheduler : harvest -S<br />
+ RESET all harvest status : harvest -R<br />
+ PURGE all harvestable collections : harvest -p -e eperson(userEmail)  
+</p>
+<p><strong>Index (Index task)</strong><br />
+Index initialzation : index-init<br />
+Index update : Index-update  
+</p>
+<p><strong>update-handle-prefix (handle prefix value change en bloc)</strong><br />
+update-handle-prefix &lt;old handle&gt; &lt;new handle&gt;  
+</p>
+</blockquote>
+</li>
+</ol>
+<p><a name="Setting on usage or not"></a></p>
+<h2>Setting on usage or not</h2>
+<ol>
+<li>
+<p>Use of system monitoring    
+</p>
+<blockquote>
+<p>Edit file '.bash_profile' in server root route. LD_LIBRARY_PATH add server route.<br />
+# vi .bash_profile<br />
+# export LD_LIBRARY_PATH=/data/home/share_lib<br />
+# source .bash_profile  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Use of compression and transmission  
+</p>
+<blockquote>
+<p>jsvc installation<br />
+It sets rapidantServerDaemon.sh file in cube folder.<br />
+RAPIDANT_HOME : It is a route for installing compression sending server.<br />
+RAPIDANT_USER : It is a user name of a server. (Access user of server prompt)<br />
+JAVA_HOME : A route of JDK installed.<br />
+JSVC_PATH : A route of jsvc installed.<br />
+COMMONS_DAEMON_PATH : A route of commons-daemon file.<br />
+$JSVC_PATH : Setting port number for '-p' of rapidant.RapidantDaemon.  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Use of Triple store(Mulgara)  
+</p>
+<blockquote>
+<p>Edit 'mulgara.data.name' of 'cube.cfg' file as a name of server for data building setting.<br />
+mulgara.data.name = cube  
+</p>
+<p>Execute a file of cube/config/mulgara-2.1.13.jar from server.<br />
+# cd cube/config<br />
+# nohup java -jar mulgara-2.1.13.jar  
+</p>
+</blockquote>
+</li>
+<li>
+<p>Add code group</p>
+<blockquote>
+<p>Create group of code used for P-CUBE such as item submission, user registeration and etc.<br />
+Input as below into db command window. Input each code group name, code group explanation, and an English name of code group into 'TYPE_NAME', 'TYPE_NOTE', 'TYPE_ENG_NAME'<br />
+mysql&gt; INSERT INTO INPUT_PARAM_TYPE (TYPE_ID, TYPE_NAME, TYPE_NOTE, TYPE_ENG_NAME) (SELECT IFNULL(MAX(TYPE_ID),0)+1, 'TYPE_NAME', 'TYPE_NOTE', 'TYPE_ENG_NAME'  FROM INPUT_PARAM_TYPE)  
+</p>
+</blockquote>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
